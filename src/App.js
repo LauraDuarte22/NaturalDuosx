@@ -14,11 +14,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/nosotros" Component={Cards}></Route>
-<<<<<<< HEAD
-          <Route path="/" Component={BannerCarousel}></Route>
-=======
-          {/* <Route path="/" Component={BannerCarousel}></Route> */}
->>>>>>> origin/main
+          {/* // <Route path="/" Component={BannerCarousel}></Route> */}
+
           <Route path="/productos" Component={ImageContainer} />
         </Routes>
         <Footer />
