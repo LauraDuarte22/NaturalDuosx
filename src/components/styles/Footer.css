@@ -1,0 +1,58 @@
+<<<<<<< HEAD
+.footer-row {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    padding: 15px;
+
+  
+  }
+  
+  .icon {
+    margin: 0 5px;
+  }
+  
+.message {
+  width: 500px; /* Adjust the width and height as needed */
+  height: 200px;
+  background-image: url("/src/assets/Contact/nube.svg");
+  background-size: cover; /* Adjust the sizing behavior as needed */
+  background-repeat: no-repeat;
+  margin:2rem -50rem;
+}
+
+
+.message p {
+  margin: 0;
+=======
+.footer-row {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    padding: 15px;
+
+  
+  }
+  
+  .icon {
+    margin: 0 5px;
+  }
+  
+.message {
+  width: 500px; /* Adjust the width and height as needed */
+  height: 200px;
+  background-image: url("/src/assets/Contact/nube.svg");
+  background-size: cover; /* Adjust the sizing behavior as needed */
+  background-repeat: no-repeat;
+  margin:2rem -50rem;
+}
+
+
+.message p {
+  margin: 0;
+>>>>>>> origin/main
+}
