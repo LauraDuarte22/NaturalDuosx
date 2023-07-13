@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import logo from "../assets/logo/LogoNatural.svg";
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
-import { CgClose } from "react-icons/cg";
+// import { CgClose } from "react-icons/cg";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
@@ -10,9 +10,7 @@ import "./styles/Header.css";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggle = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+
   return (
     <Container>
       <Row>

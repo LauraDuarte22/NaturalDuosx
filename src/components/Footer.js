@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import facebookIcon from "../assets/Iconos/Facebook.png";
 import instagramIcon from "../assets/Iconos/Instagram.png";
 import whatsappIcon from "../assets/Iconos/WhatsApp.png";
-import Asesor from "../assets/Contact/Asesor.svg";
+// import Asesor from "../assets/Contact/Asesor.svg";
 import "./styles/Footer.css"; // Archivo CSS personalizado
 
 function Footer() {
