@@ -2,6 +2,8 @@ import React from "react";
 import ImageHighlight from "./ImageHighlight";
 import image from "../assets/Body.png";
 import { Container } from "react-bootstrap";
+import Product from "./Product";
+import colageno from "../assets/Productos/Colageno-min.png";
 
 class ImageContainer extends React.Component {
   constructor(props) {
@@ -24,7 +26,7 @@ class ImageContainer extends React.Component {
           y: 165,
           width: 70,
           height: 70,
-          imgName: ['vitamina_c','vitamina_d'],
+          imgName: ["vitamina_c", "vitamina_d"],
         },
         {
           id: 3,
@@ -33,7 +35,7 @@ class ImageContainer extends React.Component {
           y: 220,
           width: 70,
           height: 70,
-          imgName: ['vitamina_c','vitamina_d'],
+          imgName: ["vitamina_c", "vitamina_d"],
         },
         {
           id: 4,
@@ -50,7 +52,7 @@ class ImageContainer extends React.Component {
           y: 255,
           width: 70,
           height: 70,
-          imgName: ['capsula']
+          imgName: ["capsula"],
         },
         {
           id: 6,
@@ -58,7 +60,7 @@ class ImageContainer extends React.Component {
           y: 285,
           width: 70,
           height: 70,
-          imgName: ['aloeVera'],
+          imgName: ["aloeVera"],
         },
         {
           id: 7,
@@ -67,7 +69,7 @@ class ImageContainer extends React.Component {
           y: 300,
           width: 70,
           height: 70,
-          imgName: ['colageno','gel'],
+          imgName: ["colageno", "gel"],
         },
         {
           id: 8,
@@ -75,7 +77,7 @@ class ImageContainer extends React.Component {
           y: 330,
           width: 70,
           height: 70,
-          imgName: ['fibra'],
+          imgName: ["fibra"],
         },
         {
           id: 9,
@@ -84,7 +86,7 @@ class ImageContainer extends React.Component {
           y: 395,
           width: 70,
           height: 70,
-          imgName: ['colageno','gel'],
+          imgName: ["colageno", "gel"],
         },
         {
           id: 10,
@@ -92,7 +94,7 @@ class ImageContainer extends React.Component {
           y: 360,
           width: 70,
           height: 70,
-          imgName: ['duoprox','uronex'],
+          imgName: ["duoprox", "uronex"],
         },
         {
           id: 11,
@@ -100,7 +102,7 @@ class ImageContainer extends React.Component {
           y: 375,
           width: 70,
           height: 70,
-          imgName:['duoprox'],
+          imgName: ["duoprox"],
         },
         {
           id: 12,
@@ -108,7 +110,7 @@ class ImageContainer extends React.Component {
           y: 390,
           width: 70,
           height: 70,
-          imgName: ['duoprox'],
+          imgName: ["duoprox"],
         },
         {
           id: 13,
@@ -116,9 +118,9 @@ class ImageContainer extends React.Component {
           y: 400,
           width: 70,
           height: 70,
-          imgName: ['colageno','vitamina_d','gel'],
+          imgName: ["colageno", "vitamina_d", "gel"],
         },
-       
+
         {
           id: 15,
           link: [7, 9, 15],
@@ -126,7 +128,7 @@ class ImageContainer extends React.Component {
           y: 455,
           width: 70,
           height: 70,
-          imgName: ['colageno','gel'],
+          imgName: ["colageno", "gel"],
         },
 
         {
@@ -136,7 +138,7 @@ class ImageContainer extends React.Component {
           y: 495,
           width: 70,
           height: 70,
-          imgName: ['colageno','duo'],
+          imgName: ["colageno", "duo"],
         },
         {
           id: 17,
@@ -145,7 +147,7 @@ class ImageContainer extends React.Component {
           y: 490,
           width: 70,
           height: 70,
-          imgName: ['colageno','duo'],
+          imgName: ["colageno", "duo"],
         },
         {
           id: 18,
@@ -153,28 +155,28 @@ class ImageContainer extends React.Component {
           y: 190,
           width: 70,
           height: 70,
-          imgName: ['vitamina_c','jarabe','pastilla'],
+          imgName: ["vitamina_c", "jarabe", "pastilla"],
         },
       ],
-      activeIndex: null, // Índice del área actualmente activa
+      activeIndex: null,
     };
   }
-
   handleAreaClick = (index) => {
+    console.log('entra')
     const { activeIndex } = this.state;
 
-    // Si el área actualmente activa es diferente al área clicada, desactivarla
-    if (activeIndex !== index) {
-      this.setState({ activeIndex: null });
+    if (activeIndex === index) {
+      this.setState({
+        activeIndex: null,
+      });
+    } else {
+      this.setState({
+        activeIndex: index,
+      });
     }
-
-    // Activar el área clicada
-    this.setState({ activeIndex: index });
   };
-
   render() {
     const { highlightedAreas, activeIndex } = this.state;
-
     return (
       <Container
         className="d-flex align-items-center justify-content-center"
@@ -189,7 +191,7 @@ class ImageContainer extends React.Component {
               y={area.y}
               width={area.width}
               height={area.height}
-              imgName={area.imgName}
+              imageUrl={area.imgName}
               active={index === activeIndex}
               onClick={() => this.handleAreaClick(index)}
             />

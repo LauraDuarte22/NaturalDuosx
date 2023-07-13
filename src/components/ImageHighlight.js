@@ -1,34 +1,37 @@
-import React, { useState } from 'react';
-import Product from './Product';
+import React, { useState, useEffect } from "react";
+import Product from "./Product";
 import colageno from "../assets/Productos/Colageno-min.png";
-import './styles/ImageHighlight.css';
+import "./styles/ImageHighlight.css";
 
-    
-function ImageHighlight({ x, y, width, height,imgName }) {
+function ImageHighlight({ x, y, width, height, imageUrl,activeProductIndex }) {
   const [showComponent, setShowComponent] = useState(false);
 
   const handleClick = () => {
     setShowComponent(!showComponent);
+
   };
+
+  useEffect(() => {
+    setShowComponent(false);
+  }, [x, y]);
 
   const style = {
     top: y,
     left: x,
     width: width,
     height: height,
-    imgName:colageno
+    activeProductIndex:activeProductIndex
   };
-  console.log(style)
   return (
     <div
-      className={`image-highlight ${showComponent ? 'active' : '' }`}
+      className={`image-highlight ${showComponent ? "active" : ""}`}
       style={style}
       onClick={handleClick}
     >
-    {showComponent && <Product imageUrl={style.imgName} />}
-
+      {showComponent && <Product imageUrl={colageno} />}
     </div>
   );
 }
+
 
 export default ImageHighlight;

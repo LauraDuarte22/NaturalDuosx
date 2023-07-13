@@ -1,20 +1,21 @@
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/Product.css";
-const Product = (imageUrl) => {
+
+const Product = ({ imageUrl }) => {
   const [showText, setShowText] = useState(false);
 
-  const handleMouseEnter = () => {
+  useEffect(() => {
     setShowText(true);
-  };
-  console.log(imageUrl)
+    return () => {
+      setShowText(false);
+    };
+  }, [imageUrl]);
 
   return (
     <div className="container-fluid position-relative">
       <img
-        src={imageUrl.imageUrl}
+        src={imageUrl}
         className="image-product"
-        onMouseEnter={handleMouseEnter}
         alt="Producto"
         width={900}
       />
@@ -22,8 +23,8 @@ const Product = (imageUrl) => {
         <div className="position-absolute start-0 bottom-0">
           <p className="description">
             La <span className="fw-bold">vitamina C + Zinc</span>, es la vitamina de todos los días que
-            contribuye a fortalecer tu defensas y tu sistema inmunolófico.
-            Reduce el riesgo de contraer enfermedades
+            contribuye a fortalecer tus defensas y tu sistema inmunológico.
+            Reduce el riesgo de contraer enfermedades.
           </p>
         </div>
       )} */}
