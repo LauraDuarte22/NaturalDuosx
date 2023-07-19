@@ -1,32 +1,34 @@
-
 .row-card {
-  --bs-gutter-x: -7.5rem!important;
+  --bs-gutter-x: -7.5rem !important;
 }
 .card {
- 
   background: rgba(52, 206, 255, 0.5) !important;
   border-radius: 50px !important;
   color: white !important;
   box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.15);
   height: 25rem !important;
-  width: 20rem!important;
-
+  width: 20rem !important;
 }
-.margin-top{
+.margin-top {
   margin-top: 3.5rem;
 }
 
-
 .card:hover {
-  background: #003ADE!important;
+  background: #003ade !important;
   cursor: pointer;
 }
 
-li{
-    /* list-style-image: url('/src/assets/logo/logo.svg'); */
+li {
+  /* list-style-image: url('/src/assets/logo/logo.svg'); */
 }
 
-.card-divider{
-  margin:1rem 2.5rem;
-  border-top: 1px solid #34CEFF;
+.card-divider {
+  margin: 1rem 2.5rem;
+  border-top: 1px solid #34ceff;
+}
+
+@media (max-width: 1199px) {
+  .row-card {
+    --bs-gutter-x: 3.5rem !important;
+  }
 }
