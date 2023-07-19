@@ -28,7 +28,7 @@ function Header() {
               </Nav>
             </Navbar.Collapse>
           </Col>
-          <Col xs={12} sm={6} className="d-flex align-items-center justify-content-end">
+          <Col xs={12} sm={6} className="d-flex align-items-center justify-content-end mx-5 my-2">
             <Navbar.Brand href="/">
               <img
                 src={logo}
