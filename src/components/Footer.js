@@ -39,27 +39,7 @@ function Footer() {
             </a>
           </Col>
           <Col xs={2} sm={2} md={1}>
-            {/* <div class="message">
-              <Row>
-                <Col>
-                  <p className="message-text">
-                    {" "}
-                    ¿Tienes dudas?{" "}
-                    <span className="fw-bold">¡Habla con un asesor!</span>
-                    Escríbenos ahora y recibe tus productossin costo adicional
-                  </p>
-                </Col>
-                <Col>
-                  <img
-                    src={Asesor}
-                    alt="Asesor"
-                    className="icon img-fluid"
-                    width={50}
-                    height={50}
-                  ></img>
-                </Col>
-              </Row> 
-            </div>*/}
+          
             <a
               href="https://api.whatsapp.com/send?phone=573228970896&text=%C2%A1Hola!%20Quisiera%20saber%20m%C3%A1s%20sobre%20los%20suplementos%20alimenticios%20%F0%9F%8D%8A%F0%9F%A7%83%F0%9F%8D%87"
               target="_blank"

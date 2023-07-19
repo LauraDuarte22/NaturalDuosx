@@ -1,29 +1,15 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: none;
+  padding: 15px;
+}
 
 .footer-row {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    justify-content: space-between;
-    padding: 15px;
-
-  
-  }
-  
-  .icon {
-    margin: 0 5px;
-  }
-  
-.message {
-  width: 500px; /* Adjust the width and height as needed */
-  height: 200px;
-  background-image: url("/src/assets/Contact/nube.svg");
-  background-size: cover; /* Adjust the sizing behavior as needed */
-  background-repeat: no-repeat;
-  margin:2rem -50rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-.message p {
-  margin: 0;
-}
