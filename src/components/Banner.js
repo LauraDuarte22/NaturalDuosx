@@ -28,7 +28,7 @@ const banners = [
       subtitle: "tu salud",
       description: "sin afectar tu rutina!",
       fontSize: "display-1",
-      fontDescription: "display-4",
+      fontDescription: "display-6",
       margin: {
         marginBottom: "200px",
       },
@@ -47,8 +47,8 @@ const banners = [
       description: "están endulzados con",
       extraDescription: "¡Se siente bien y sabe bien!",
       desciptionBold: "Stevia",
-      fontDescription: "display-6",
-      fontSize: "display-2",
+      fontDescription: "fs-2",
+      fontSize: "display-4",
       margin: {
         marginLeft: "10px",
         marginBottom:"100px"
@@ -90,7 +90,7 @@ function BannerCarousel() {
                       <img
                         className={`d-block img-fluid ${banner.imgClass}`}
                         src={banner.image}
-                        width="300"
+                        width="250"
                         alt="Mejora tu salud sin afectar tu rutina"
                       />
                     </div>
@@ -113,7 +113,7 @@ function BannerCarousel() {
                         {banner.caption.subtitle}
                       </h2>
                       <p
-                        className="display-5 text-center"
+                        className="fs-3 text-center"
                         style={{ marginLeft: "62px" }}
                       >
                         {banner.caption.description}
@@ -129,7 +129,7 @@ function BannerCarousel() {
                       style={banner.caption.margin}
                      
                     >
-                      <p className="display-5">
+                      <p className="fs-1">
                         {banner.caption.extraDescription}
                       </p>
                       <h2
@@ -159,7 +159,7 @@ function BannerCarousel() {
                       <img
                         className={`d-block ${banner.imgClass}`}
                         src={banner.image}
-                        width={900}
+                        width={800}
                         alt="Mejora tu salud sin afectar tu rutina"
                       />
                     </div>
