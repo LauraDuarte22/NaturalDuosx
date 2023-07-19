@@ -15,10 +15,10 @@ function Cards() {
               </Card.Title>
               <div className="card-divider"></div>
               <Card.Text className="text-rigth lead  my-2">
-                Somos una empresa dedicada al desarrollo de productos
-                naturales, utilizando procesos que cumplen normas internacionales
-                de calidad brindando productos naturales de beneficio de la salud
-                de nuestros consumidores.
+                Somos una empresa dedicada al desarrollo de productos naturales,
+                utilizando procesos que cumplen normas internacionales de calidad
+                brindando productos naturales de beneficio de la salud de nuestros
+                consumidores.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -40,7 +40,7 @@ function Cards() {
             </Card.Body>
           </Card>
         </Col>
-        <Col sm={12} md={12} lg={4} xl={4}>
+        <Col sm={12} md={12} lg={4} xl={4} className="d-flex justify-content-center">
           <Card className="card mt-5">
             <Card.Body>
               <Card.Title className="text-center fw-bold fs-2">

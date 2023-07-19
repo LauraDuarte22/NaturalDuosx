@@ -17,9 +17,13 @@
   background: #003ade !important;
   cursor: pointer;
 }
+.custom-list {
+  list-style-type: none;
+}
 
 li {
-  /* list-style-image: url('/src/assets/logo/logo.svg'); */
+   list-style-image: url('/src/assets/Iconos/viñetas.png'); 
+ 
 }
 
 .card-divider {

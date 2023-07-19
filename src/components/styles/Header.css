@@ -1,18 +1,15 @@
-
 a:hover {
   color: #00c0fc !important;
-}
-.margin {
-  margin-left: 27rem;
-  margin-top: 4rem;
 }
 
 .container {
   height: 90px;
 }
+
 .navbar-toggler-icon {
   background-image: url("/src/assets/Iconos/menu.svg") !important;
 }
+
 .navbar-toggler {
   border: none !important;
 }
@@ -20,11 +17,36 @@ a:hover {
 .navbar-toggler:focus {
   box-shadow: none !important;
 }
+
 .navbar-toggler-icon svg {
   width: 50px !important;
   height: 50px !important;
   color: #ffffff;
   z-index: 1 !important;
+}
+
+.menu-icon {
+  cursor: pointer;
+  font-size: 35px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.menu-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.show-navbar .navbar-collapse,
+.show-navbar .navbar-toggler-icon,
+.navbar-collapse {
+  display: none !important;
 }
 
 @media (max-width: 991px) {
@@ -45,9 +67,11 @@ a:hover {
     padding-top: 2.5rem !important;
     cursor: pointer;
   }
+
   .container {
     height: 300px !important;
   }
+
   .margin {
     margin-left: 19rem;
     margin-top: -5rem;
@@ -59,25 +83,30 @@ a:hover {
     left: -140px;
   }
 }
+
 @media (max-width: 767px) {
   .navbar-nav {
     left: -190px;
   }
 }
+
 @media (max-width: 700px) {
   .navbar-nav {
     left: -150px;
   }
 }
+
 @media (max-width: 660px) {
   .navbar-nav {
     left: -130px;
   }
 }
+
 @media (max-width: 600px) {
   .navbar-nav {
     left: -100px;
   }
+
   .margin {
     margin-left: 15rem;
     margin-top: -5.5rem;
@@ -89,16 +118,19 @@ a:hover {
     left: -250px;
     width: 50% !important;
   }
+
   .margin {
     margin-left: 20rem;
     margin-top: -25.5rem;
   }
 }
+
 @media (max-width: 540px) {
   .navbar-nav {
     left: -200px;
   }
 }
+
 @media (max-width: 475px) {
   .navbar-nav {
     left: -170px;
@@ -118,12 +150,6 @@ a:hover {
   }
 }
 
-@media (max-width: 345px) {
-  .navbar-nav {
-    left: -125px;
-    width: 80% !important;
-  }
-}
 @media (max-width: 300px) {
   .navbar-nav {
     left: -115px;
@@ -137,6 +163,7 @@ a:hover {
     width: 90% !important;
   }
 }
+
 @media (max-width: 235px) {
   .navbar-nav {
     left: -80px;
