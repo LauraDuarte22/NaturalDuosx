@@ -1,6 +1,4 @@
-.row-card {
-  --bs-gutter-x: -7.5rem !important;
-}
+
 .card {
   background: rgba(52, 206, 255, 0.5) !important;
   border-radius: 50px !important;
@@ -31,8 +29,3 @@ li {
   border-top: 1px solid #34ceff;
 }
 
-@media (max-width: 1199px) {
-  .row-card {
-    --bs-gutter-x: 3.5rem !important;
-  }
-}
