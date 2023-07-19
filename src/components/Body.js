@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import image from "../assets/Body.png";
 import { Container } from "react-bootstrap";
+import image from "../assets/Body.png";
 import colageno from "../assets/Productos/Colageno-min.png";
 import vitamina_c from "../assets/Productos/Vitamina C-min.png";
-import vitamina_d from "../assets/Productos/Vitaday Sure-min.png"
+import vitamina_d from "../assets/Productos/Vitaday Sure-min.png";
+import Product from "./Product";
 import "./styles/Body.css";
 
 const BodyComponent = () => {
@@ -11,7 +12,6 @@ const BodyComponent = () => {
 
   const pointsData = [
     {
-      //cerebro
       id: 1,
       link: [1, 4],
       x: 675,
@@ -26,7 +26,6 @@ const BodyComponent = () => {
       imgName: [vitamina_c, vitamina_d],
     },
     {
-      //nariz
       id: 3,
       link: [2, 3],
       x: 675,
@@ -34,7 +33,6 @@ const BodyComponent = () => {
       imgName: [vitamina_c, vitamina_d],
     },
     {
-      //brazo arriba
       id: 4,
       link: [1, 4],
       x: 640,
@@ -42,21 +40,20 @@ const BodyComponent = () => {
       imgName: [colageno],
     },
     {
-      //corazon
       id: 5,
+      link: [5],
       x: 680,
       y: 280,
       imgName: ["capsula"],
     },
     {
-      //higado
       id: 6,
+      link: [6],
       x: 690,
       y: 315,
       imgName: ["aloeVera"],
     },
     {
-      //brazo derecho
       id: 7,
       link: [7, 9, 15],
       x: 735,
@@ -64,14 +61,13 @@ const BodyComponent = () => {
       imgName: [colageno, "gel"],
     },
     {
-      //mano
       id: 8,
+      link: [8],
       x: 750,
       y: 425,
       imgName: ["fibra"],
     },
     {
-      //vejiga
       id: 9,
       link: [7, 9, 15],
       x: 675,
@@ -79,29 +75,29 @@ const BodyComponent = () => {
       imgName: [colageno, "gel"],
     },
     {
-      //vejiga 2
       id: 10,
+      link: [10],
       x: 675,
       y: 402,
       imgName: ["duoprox", "uronex"],
     },
     {
-      //vejiga 3
       id: 11,
+      link: [11],
       x: 675,
       y: 415,
       imgName: ["duoprox"],
     },
     {
-      //hueso derecha
       id: 12,
+      link: [12],
       x: 715,
       y: 425,
       imgName: ["duoprox"],
     },
     {
-      //rodilla
       id: 13,
+      link: [13],
       x: 645,
       y: 480,
       imgName: [colageno, vitamina_d, "gel"],
@@ -123,24 +119,22 @@ const BodyComponent = () => {
   ];
 
   const handlePointClick = (pointId) => {
-    if (selectedPoint === pointId) {
-      setSelectedPoint(null);
-    } else {
-      setSelectedPoint(pointId);
-    }
+    setSelectedPoint((prevSelectedPoint) =>
+      prevSelectedPoint === pointId ? null : pointId
+    );
   };
 
   const renderImages = (point) => {
     if (selectedPoint === point.id) {
       return point.imgName.map((imageName, index) => (
-        <img
-          width={150}
+        <div
           key={index}
-          src={imageName}
-          alt={`Imagen ${imageName}`}
-          style={{ marginLeft: index !== 0 ? "10px" : "0" }}
-
-        />
+          className={`product-container-${
+            index % 2 === 0 ? "left" : "right"
+          }`}
+        >
+          <Product key={index} index={index} imageName={imageName} />
+        </div>
       ));
     }
     return null;
@@ -157,20 +151,27 @@ const BodyComponent = () => {
           {pointsData.map((point) => (
             <div
               key={point.id}
-              className={`point ${
-                selectedPoint === point.id ? "selected" : ""
-              }`}
+              className={`point ${selectedPoint === point.id ? "selected" : ""}`}
               style={{
                 top: point.y,
                 left: point.x,
               }}
               onClick={() => handlePointClick(point.id)}
-            ></div>
+            >
+              {point.link.map((linkIndex) => (
+                <a
+                  key={linkIndex}
+                  className={selectedPoint === point.id ? "selected-link" : ""}
+                >
+                  {/* Renderiza el contenido del enlace aquí */}
+                </a>
+              ))}
+            </div>
           ))}
         </div>
       </div>
       <div className="image-container">
-        {pointsData.map((point) => renderImages(point))}
+        {pointsData.map(renderImages)}
       </div>
     </Container>
   );

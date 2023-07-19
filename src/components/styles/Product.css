@@ -1,8 +1,5 @@
-
-.image-product {
-  position: absolute;
-  width: 900px;
-  height: 900px;
-  top: 500px;
-  right: 900px;
-}
+/* .product-container{
+  border-radius: 32px;
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0.04) 100%);
+transform: translate(-250%, -50%);
+} */
