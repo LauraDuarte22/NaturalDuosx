@@ -16,7 +16,6 @@ function App() {
           <Routes>
             <Route path="/nosotros" Component={Cards} className="main"></Route>
             // <Route path="/" Component={BannerCarousel}></Route>
-
             <Route path="/productos" Component={BodyComponent} />
           </Routes>
           <Footer className="footer" />

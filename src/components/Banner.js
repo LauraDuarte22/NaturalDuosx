@@ -36,7 +36,7 @@ const banners = [
     colSizes: {
       sm: 12,
       md: 6,
-      x: 0,
+      x:0,
     },
   },
   {
@@ -51,17 +51,17 @@ const banners = [
       fontSize: "display-4",
       margin: {
         marginLeft: "10px",
-        marginBottom: "100px",
+        marginBottom:"100px"
       },
+    
     },
     colSizes: {
       sm: 12,
       md: 5,
-      x: 1,
+      x:1,
     },
   },
 ];
-
 function BannerCarousel() {
   const [index, setIndex] = useState(0);
 
@@ -71,25 +71,36 @@ function BannerCarousel() {
 
   return (
     <Container className="mt-5 banner">
-      <Carousel activeIndex={index} onSelect={handleSelect} interval={100000000}>
+      <Carousel
+        activeIndex={index}
+        onSelect={handleSelect}
+        interval={100000000}
+      >
         {banners.map((banner, idx) => (
           <Carousel.Item key={idx}>
             <Row className="align-items-center justify-content-start">
               {idx === 0 ? (
                 <>
-                  <Col xs={12} md={12 - banner.colSizes.md} className="text-center">
+                  <Col
+                    xs={12}
+                    md={12 - banner.colSizes.md}
+                    className="text-center"
+                  >
                     <div className="d-flex align-items-center justify-content-center">
                       <img
                         className={`d-block img-fluid ${banner.imgClass}`}
                         src={banner.image}
-                        width="234"
+                        width="230"
                         alt="Mejora tu salud sin afectar tu rutina"
                       />
                     </div>
                   </Col>
-                  <Col {...banner.colSizes} className="text-center align-items-center">
+                  <Col
+                    {...banner.colSizes}
+                    className="text-center align-items-center"
+                  >
                     <div
-                      className="text-center text-white"
+                      className="text-center text-white "
                       style={{ marginRight: "300px", marginBottom: "200px" }}
                     >
                       <h2
@@ -101,7 +112,10 @@ function BannerCarousel() {
                       <h2 className="circle fw-bold display-1 subtitle text-white">
                         {banner.caption.subtitle}
                       </h2>
-                      <p className="fs-3 text-center" style={{ marginLeft: "62px" }}>
+                      <p
+                        className="fs-3 text-center"
+                        style={{ marginLeft: "62px" }}
+                      >
                         {banner.caption.description}
                       </p>
                     </div>
@@ -110,8 +124,14 @@ function BannerCarousel() {
               ) : (
                 <>
                   <Col {...banner.colSizes} className="text-center">
-                    <div className="text-center text-white" style={banner.caption.margin}>
-                      <p className="fs-1">{banner.caption.extraDescription}</p>
+                    <div
+                      className="text-center text-white"
+                      style={banner.caption.margin}
+                     
+                    >
+                      <p className="fs-1">
+                        {banner.caption.extraDescription}
+                      </p>
                       <h2
                         className={`fw-bold text-white ${banner.caption.fontSize}`}
                       >
@@ -123,7 +143,7 @@ function BannerCarousel() {
                         {banner.caption.subtitle}
                       </h2>
                       <p
-                        className={`text-white ${banner.caption.fontDescription}`}
+                        className={` text-white ${banner.caption.fontDescription}`}
                       >
                         {banner.caption.description}
                         <strong> {banner.caption.desciptionBold}</strong>
@@ -132,7 +152,7 @@ function BannerCarousel() {
                   </Col>
                   <Col
                     xs={12}
-                    md={12 - (banner.colSizes.md + banner.colSizes.x)}
+                    md={12 - (banner.colSizes.md +banner.colSizes.x)}
                     className="text-center"
                   >
                     <div className="d-flex align-items-center justify-content-center">
@@ -153,5 +173,4 @@ function BannerCarousel() {
     </Container>
   );
 }
-
 export default BannerCarousel;

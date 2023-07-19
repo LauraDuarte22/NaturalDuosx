@@ -1,20 +1,19 @@
 import React from "react";
 import { Card, Container, Row, Col } from "react-bootstrap";
-
 import "./styles/Card.css";
 
 function Cards() {
   return (
-    <Container className="margin-top align-items-center justify-content-center layout">
-      <Row className="justify-content-center row-card">
-        <Col sm={12} md={6} lg={4} xl={4}>
+    <Container className="margin-top">
+      <Row className="justify-content-center">
+        <Col sm={12} md={6} lg={4} xl={4} className="d-flex justify-content-center">
           <Card className="card mt-5">
             <Card.Body>
               <Card.Title className="text-center fw-bold fs-2">
                 Misión
               </Card.Title>
               <div className="card-divider"></div>
-              <Card.Text className="text-rigth lead  my-2">
+              <Card.Text className="text-rigth lead my-2">
                 Somos una empresa dedicada al desarrollo de productos naturales,
                 utilizando procesos que cumplen normas internacionales de calidad
                 brindando productos naturales de beneficio de la salud de nuestros
@@ -23,7 +22,7 @@ function Cards() {
             </Card.Body>
           </Card>
         </Col>
-        <Col sm={12} md={6} lg={4} xl={4}>
+        <Col sm={12} md={6} lg={4} xl={4} className="d-flex justify-content-center">
           <Card className="card mt-5">
             <Card.Body>
               <Card.Title className="text-center fw-bold fs-2">
