@@ -88,9 +88,9 @@ function BannerCarousel() {
                   >
                     <div className="d-flex align-items-center justify-content-center">
                       <img
-                        className={`d-block img-fluid ${banner.imgClass}`}
+                        className={`d-block img-fluid w-100 ${banner.imgClass}`}
                         src={banner.image}
-                        width="230"
+                     
                         alt="Mejora tu salud sin afectar tu rutina"
                       />
                     </div>
@@ -157,9 +157,9 @@ function BannerCarousel() {
                   >
                     <div className="d-flex align-items-center justify-content-center">
                       <img
-                        className={`d-block ${banner.imgClass}`}
+                        className={`d-block img-fluid w-100 ${banner.imgClass}`}
                         src={banner.image}
-                        width={800}
+                    
                         alt="Mejora tu salud sin afectar tu rutina"
                       />
                     </div>

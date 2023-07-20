@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/logo/LogoNatural.svg";
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import "./styles/Header.css";
 import { AiOutlineClose } from "react-icons/ai";
@@ -14,26 +13,24 @@ function Header() {
   };
 
   return (
-    <Container>
-      <Row className="align-items-center">
-        <Col xs={12} sm={6} className="d-flex align-items-center">
-          <Navbar
-            expand="lg"
-            className={`navbar ${isMenuOpen ? "show-navbar" : ""}`}
-          >
-            {isMenuOpen ? (
-              <AiOutlineClose
-                className="menu-icon"
-                onClick={handleMenuToggle}
-              />
-            ) : (
-              <Navbar.Toggle
-                aria-controls="navbar-nav"
-                onClick={handleMenuToggle}
-              />
-            )}
+    <Container fluid>
+      <Row className="align-items-center mx-5 my-3">
+        <Col
+          xs={6}
+          sm={6}
+          md={4}
+          lg={3}
+          xl={2}
+          className="d-flex align-items-center"
+        >
+          <Navbar expand="lg" className={`navbar ${isMenuOpen ? "show-navbar" : ""}`}>
+            <Navbar.Toggle
+              aria-controls="navbar-nav"
+              onClick={handleMenuToggle}
+              className="navbar-toggler"
+            />
             <Navbar.Collapse id="navbar-nav">
-              <Nav className="ml-auto mr-auto container">
+              <Nav className="ml-auto">
                 <Nav.Link
                   as={Link}
                   to="/"
@@ -60,8 +57,15 @@ function Header() {
             </Navbar.Collapse>
           </Navbar>
         </Col>
-        <Col xs={12} sm={6} className="d-flex align-items-center justify-content-end">
-          <Navbar.Brand href="/">
+        <Col
+          xs={6}
+          sm={6}
+          md={8}
+          lg={9}
+          xl={10}
+          className="d-flex align-items-center justify-content-end"
+        >
+          <Navbar.Brand href="/" className="ml-auto">
             <img
               src={logo}
               alt="Logo Natural Duos'x"

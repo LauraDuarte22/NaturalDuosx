@@ -9,18 +9,18 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App ">
-      <section class="layout">
-        <Router>
-          <Header className="header" />
+    <div className="App">
+      <Router>
+        <Header />
+        <div className="main-content">
           <Routes>
-            <Route path="/nosotros" Component={Cards} className="main"></Route>
-            // <Route path="/" Component={BannerCarousel}></Route>
-            <Route path="/productos" Component={BodyComponent} />
+            <Route path="/nosotros" element={<Cards />} />
+            <Route path="/" element={<BannerCarousel />} />
+            <Route path="/productos" element={<BodyComponent />} />
           </Routes>
-          <Footer className="footer" />
-        </Router>
-      </section>
+        </div>
+        <Footer />
+      </Router>
     </div>
   );
 }
