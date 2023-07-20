@@ -13,7 +13,8 @@
   background-image: none !important;
 }
 .carousel-indicators {
-  top: 400px !important;
+  top: 90% !important;
+ 
 }
 .carousel-indicators button {
   border-radius: 50% !important;
