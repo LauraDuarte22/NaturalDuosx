@@ -9,15 +9,16 @@ body{
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure the app takes at least the full viewport height */
+  min-height: 100vh;
 }
 
 .main-content {
-  flex: 1; /* This will make the main-content div take up all available space */
+  flex: 1; 
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center its children horizontally */
-  justify-content: center; /* Center its children vertically */
+  align-items: center; 
+  justify-content: center; 
 }
-
-/* Add any other styles you need for the main content area */
+.footer {
+  min-height: 100px;
+}

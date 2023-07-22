@@ -11,7 +11,9 @@
 .carousel-control-next-icon {
   background-image: none !important;
 }
-
+.carousel-indicators {
+  margin-bottom: 4.5rem !important;
+}
 .carousel-indicators button {
   border-radius: 50% !important;
   width: 15px !important;
@@ -31,3 +33,6 @@
   width: 40% !important;
 }
 
+.w-75 {
+  width: 75% !important;
+}

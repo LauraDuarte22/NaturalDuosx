@@ -19,7 +19,7 @@ function App() {
             <Route path="/productos" element={<BodyComponent />} />
           </Routes>
         </div>
-        <Footer />
+        <Footer  className="my-5"/>
       </Router>
     </div>
   );
