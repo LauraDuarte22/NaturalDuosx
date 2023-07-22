@@ -34,17 +34,17 @@ const Footer = () => {
 
   return (
     <footer className="fixed-bottom">
-      <Container className="mb-2">
+      <Container >
         <Row>
           <Col xs={6} sm={6} className="d-flex justify-content-center justify-content-sm-start mb-2 mb-sm-0">
             {socialMediaLinks.map((link, index) => (
-              <a key={index} href={link.url} className="me-3">
+              <a key={index} href={link.url} className="me-3" target="_blank">
                 <img src={link.icon} alt={link.name} width={link.width} height={link.height} />
               </a>
             ))}
           </Col>
           <Col xs={6} sm={6} className="d-flex justify-content-center justify-content-sm-end">
-            <a href={whatsappLink.url}>
+            <a href={whatsappLink.url} target="_blank">
               <img src={whatsappLink.icon} alt={whatsappLink.name} width={whatsappLink.width} height={whatsappLink.height} />
             </a>
           </Col>

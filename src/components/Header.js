@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/logo/LogoNatural.svg";
+import logo from "../assets/logo/LogoNatural.png";
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./styles/Header.css";

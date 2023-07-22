@@ -29,18 +29,16 @@ const banners = [
       description: "sin afectar tu rutina!",
       fontSize: "display-1",
       fontDescription: "display-6",
-      margin: {
-        marginBottom: "200px",
-      },
+    
     },
     colSizes: {
       sm: 12,
       md: 6,
-      x:0,
+     
     },
   },
   {
-    image: image2,
+    image: image3,
     caption: {
       title: "Todos nuestros",
       subtitle: "productos",
@@ -49,16 +47,13 @@ const banners = [
       desciptionBold: "Stevia",
       fontDescription: "fs-2",
       fontSize: "display-4",
-      margin: {
-        marginLeft: "10px",
-        marginBottom:"100px"
-      },
+    
     
     },
     colSizes: {
       sm: 12,
-      md: 5,
-      x:1,
+      md: 6,
+     
     },
   },
 ];
@@ -69,63 +64,52 @@ function BannerCarousel() {
   };
 
   return (
-    <Container className="mt-5 banner">
-      <Carousel activeIndex={index} onSelect={handleSelect} interval={6000}>
+    <Container className="banner">
+      <Carousel activeIndex={index} onSelect={handleSelect} interval={2000} >
         {banners.map((banner, idx) => (
           <Carousel.Item key={idx}>
             <Row className="align-items-center justify-content-center">
               {idx === 0 ? (
-                <>
-                  <Col
-                    xs={12}
-                    md={12 - banner.colSizes.md}
-                    className="text-center align-items-center"
+              <>
+              <Col
+                xs={12}
+                md={banner.colSizes.md} // The order is the same on md breakpoint
+                className="text-center align-items-center order-1 order-md-0"
+              >
+                <div className="d-flex align-items-center justify-content-center">
+                  <img
+                    className={`d-block img-fluid w-40 ${banner.imgClass}`}
+                    src={banner.image}
+                    
+                    alt="Envío gratis a todo el país"
+                  />
+                </div>
+              </Col>
+              <Col
+                {...banner.colSizes}
+                className="text-center align-items-center order-0 order-md-1"
+              >
+                <div className="slide-content">
+                  <h2
+                    className={`fw-bold text-center text-white larger-font-size ${banner.caption.fontSize}`}
                   >
-                    <div className="d-flex align-items-center justify-content-center">
-                      <img
-                        className={`d-block img-fluid w-50 ${banner.imgClass}`}
-                        src={banner.image}
-                        alt="Envío gratis a todo el país"
-                      />
-                    </div>
-                  </Col>
-                  <Col
-                    {...banner.colSizes}
-                    className="text-center align-items-center"
-                  >
-                    <div
-                      className="text-center text-white "
-                      style={{ marginRight: "60%", marginBottom: "50%" }}
-                    >
-                      <h2
-                        className={`fw-bold text-center text-white larger-font-size ${banner.caption.fontSize}`}
-                        style={{ marginLeft: "20%" }}
-                      >
-                        {banner.caption.title}
-                      </h2>
-                      <h2 className="circle fw-bold display-1 subtitle text-white">
-                        {banner.caption.subtitle}
-                      </h2>
-                      <p
-                        className="fs-3 text-center"
-                        style={{ marginLeft: "62px" }}
-                      >
-                        {banner.caption.description}
-                      </p>
-                    </div>
-                  </Col>
-                </>
+                    {banner.caption.title}
+                  </h2>
+                  <h2 className="circle fw-bold display-1 subtitle text-white">
+                    {banner.caption.subtitle}
+                  </h2>
+                  <p className="fs-3 text-center text-white">{banner.caption.description}</p>
+                </div>
+              </Col>
+            </>
               ) : (
                 <>
                   <Col
                     {...banner.colSizes}
                     className="text-center align-items-center"
                   >
-                    <div
-                      className="text-center text-white"
-                      style={banner.caption.margin}
-                    >
-                      <p className="fs-1">{banner.caption.extraDescription}</p>
+                    <div className="slide-content" >
+                      <p className="fs-1 text-white">{banner.caption.extraDescription}</p>
                       <h2 className={`fw-bold text-white ${banner.caption.fontSize}`}>
                         {banner.caption.title}
                       </h2>
@@ -140,12 +124,12 @@ function BannerCarousel() {
                   </Col>
                   <Col
                     xs={12}
-                    md={12 - (banner.colSizes.md + banner.colSizes.x)}
+                    md={12 - banner.colSizes.md}
                     className="text-center align-items-center"
                   >
                     <div className="d-flex align-items-center justify-content-center">
                       <img
-                        className={`d-block img-fluid w-100 ${banner.imgClass}`}
+                        className="d-block img-fluid w-80"
                         src={banner.image}
                         alt="Mejora tu salud sin afectar tu rutina"
                       />
