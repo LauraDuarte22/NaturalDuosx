@@ -19,7 +19,7 @@ a:hover {
   color: #ffffff;
   z-index: 1 !important;
 }
- .menu-icon {
+.menu-icon {
   cursor: pointer;
   font-size: 35px;
   color: white;
@@ -36,5 +36,26 @@ a:hover {
   width: 25px;
   height: 25px;
 }
-
-
+@media only screen and (max-width: 981px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 40px;
+    left: -75px;
+    border-radius: 0px 0px 45px 0px;
+    width: 217px;
+    height: 209px;
+    flex-shrink: 0;
+    background-color: rgba(52, 206, 255, 1);
+    z-index: 1;
+    padding: 1.5 !important;
+  }
+  .navbar-collapse .navbar-nav a {
+    padding: 1rem !important;
+  }
+  .navbar-collapse .navbar-nav a:hover {
+    color: #ffffff!important;
+  }
+  .navbar-nav {
+    padding: 0px;
+  }
+}

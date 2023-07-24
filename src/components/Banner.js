@@ -25,7 +25,6 @@ const banners = [
       sm: 12,
       md: 6,
     },
-
   },
   {
     image: image3,
@@ -43,7 +42,7 @@ function BannerCarousel() {
   };
 
   return (
-    <Container className="banner">
+    <Container className="banner d-flex align-items-center justify-content-center">
       <Carousel activeIndex={index} onSelect={handleSelect} interval={4000}>
         {banners.map((banner, idx) => (
           <Carousel.Item key={idx}>
@@ -69,7 +68,7 @@ function BannerCarousel() {
                   >
                     <div className="slide-content">
                       <img
-                        className={`d-block img-fluid w-75 ${banner.imgClass}`}
+                        className={`d-block img-fluid w-70 ${banner.imgClass}`}
                         src={banner.text}
                         alt="Envío gratis a todo el país"
                       ></img>
@@ -84,7 +83,7 @@ function BannerCarousel() {
                   >
                     <div className="slide-content">
                       <img
-                        className="d-block img-fluid w-100"
+                        className="d-block img-fluid w-70"
                         src={banner.text}
                         alt="Mejora tu salud sin afectar tu rutina"
                       />

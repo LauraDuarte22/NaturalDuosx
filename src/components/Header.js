@@ -3,7 +3,6 @@ import logo from "../assets/logo/LogoNatural.png";
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./styles/Header.css";
-import { AiOutlineClose } from "react-icons/ai";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
