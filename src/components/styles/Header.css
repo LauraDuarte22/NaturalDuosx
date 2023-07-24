@@ -43,17 +43,20 @@ a:hover {
     left: -75px;
     border-radius: 0px 0px 45px 0px;
     width: 217px;
-    height: 209px;
+    height: 230px;
     flex-shrink: 0;
-    background-color: rgba(52, 206, 255, 1);
+    background: linear-gradient(180deg, #008DFB 0%, rgba(0, 190, 250, 0.81) 100%);
     z-index: 1;
-    padding: 1.5 !important;
+
+    display: flex;
+    justify-content: center;
   }
   .navbar-collapse .navbar-nav a {
     padding: 1rem !important;
+    border-bottom: 1px solid #ffffff !important;
   }
   .navbar-collapse .navbar-nav a:hover {
-    color: #ffffff!important;
+    color: #ffffff !important;
   }
   .navbar-nav {
     padding: 0px;

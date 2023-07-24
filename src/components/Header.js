@@ -33,7 +33,7 @@ function Header() {
                 <Nav.Link
                   as={Link}
                   to="/"
-                  className="fs-3 text-white p-5"
+                  className="fs-3 text-white p-5 text-center"
                   active
                 >
                   Inicio
@@ -41,14 +41,14 @@ function Header() {
                 <Nav.Link
                   as={Link}
                   to="/nosotros"
-                  className="fs-3 text-white p-5"
+                  className="fs-3 text-white p-5 text-center"
                 >
                   Nosotros
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to="/productos"
-                  className="fs-3 text-white p-5"
+                  className="fs-3 text-white p-5 text-center"
                 >
                   Productos
                 </Nav.Link>
