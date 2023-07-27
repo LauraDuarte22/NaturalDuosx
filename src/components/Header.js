@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import logo from "../assets/logo/LogoNatural.png";
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -7,9 +7,22 @@ import "./styles/Header.css";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  let menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setIsMenuOpen(false);
+        console.log(menuRef.current);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
 
   return (
     <Container fluid>
@@ -22,10 +35,17 @@ function Header() {
           xl={2}
           className="d-flex align-items-center"
         >
-          <Navbar expand="lg" className={`navbar ${isMenuOpen ? "show-navbar" : ""}`}>
+          <Navbar
+           ref={menuRef}
+            id="navbar"
+            expand="lg"
+            className={`navbar ${isMenuOpen ? "show-navbar" : ""}`}
+          >
             <Navbar.Toggle
               aria-controls="navbar-nav"
-              onClick={handleMenuToggle}
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen);
+              }}
               className="navbar-toggler"
             />
             <Navbar.Collapse id="navbar-nav">

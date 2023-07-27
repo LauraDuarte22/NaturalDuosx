@@ -52,7 +52,7 @@ function BannerCarousel() {
                   <Col
                     xs={12}
                     md={banner.colSizes.md} // The order is the same on md breakpoint
-                    className="text-center align-items-center order-1 order-md-0"
+                    className="text-center align-items-center order-1 order-md-0  my-3 my-md-0"
                   >
                     <div className="d-flex align-items-center justify-content-center">
                       <img
@@ -64,7 +64,7 @@ function BannerCarousel() {
                   </Col>
                   <Col
                     {...banner.colSizes}
-                    className="text-center align-items-center order-0 order-md-1"
+                    className="text-center align-items-center order-0 order-md-1 my-3 my-md-0"
                   >
                     <div className="slide-content">
                       <img
@@ -79,11 +79,11 @@ function BannerCarousel() {
                 <>
                   <Col
                     {...banner.colSizes}
-                    className="text-center align-items-center"
+                    className="text-center align-items-center my-3 my-md-0"
                   >
                     <div className="slide-content">
                       <img
-                        className="d-block img-fluid w-70"
+                        className="d-block img-fluid w-100"
                         src={banner.text}
                         alt="Mejora tu salud sin afectar tu rutina"
                       />
@@ -92,11 +92,11 @@ function BannerCarousel() {
                   <Col
                     xs={12}
                     md={12 - banner.colSizes.md}
-                    className="text-center align-items-center"
+                    className="text-center align-items-center my-3 my-md-0"
                   >
                     <div className="d-flex align-items-center justify-content-center">
                       <img
-                        className="d-block img-fluid w-80"
+                        className="d-block img-fluid w-75"
                         src={banner.image}
                         alt="Mejora tu salud sin afectar tu rutina"
                       />
