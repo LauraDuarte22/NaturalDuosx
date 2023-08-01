@@ -2,23 +2,33 @@
   position: absolute;
   top: 0;
   left: 0;
-
 }
-
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .point {
   position: absolute;
-  width: 12px;
-  height: 12px;
+  width: 15px;
+  height: 15px;
   background: rgba(255, 255, 255, 1);
   filter: blur(3px);
   border-radius: 50%;
   cursor: pointer;
+  animation: pulse 2s infinite;
 }
 
-.point.selected
-,.selected-link {
+.point.selected,
+.selected-link {
   background-color: #ff0000;
-  filter: None;
+  filter: blur(3px);
   cursor: pointer;
 }
 
@@ -29,14 +39,27 @@
 .product-container {
   position: absolute;
 }
-
-.product-container-left {
-
-  transform: translate(10%, -30%);
+.selected-image {
+  display: block;
+  margin: 10px auto;
 }
 
+.product-container-left,
 .product-container-right {
-  right: 50%;
-  top: 50%;
-  transform: translate(50%, -50%);
+  display: inline-block;
+  vertical-align: top;
+  margin: 0px 200px; /* Agregar margen entre las imágenes de los productos */
 }
+.nube-container {
+  background: no-repeat center url('/src/assets/Iconos/nube.png');
+  background-size: contain;
+  height: 180px; /* Adjust the height to your preference */
+  padding: 20px 110px; /* Add some padding to create space around the content */
+  position: fixed; /* or position: absolute; */
+  bottom: 30px; /* Adjust the distance from the bottom */
+  right: 10px; /* Adjust the distance from the right */
+}
+
+
+
+
