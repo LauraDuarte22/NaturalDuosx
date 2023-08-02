@@ -14,7 +14,7 @@ import Duoprox from "../assets/Productos/Duoprox.png";
 import Uronex from "../assets/Productos/Uronex.png";
 import Reuduol from "../assets/Productos/Reuduol.png";
 import Vitaday from "../assets/Productos/Vitaday.png";
-import asesor from "../assets/Iconos/asesor.png";
+
 import Product from "./Product";
 import "./styles/Body.css";
 
@@ -247,28 +247,7 @@ const BodyComponent = () => {
           </Col>
         </Row>
       </Container>
-      <div className="nube-container">
-  <Container>
-    <Row>
-      <Col md={9} className="d-flex flex-wrap justify-content-center align-items-center">
-        <p className="text-center">
-          ¿Tienes dudas?{" "}
-          <span className="fw-bold">
-            {" "}
-            ¡Habla con <br />
-            un asesor!
-          </span>
-          Escríbenos ahora <br />y recibe tus productos sin
-          <br /> costo adicional ☺️
-        </p>
-      </Col>
-      <Col md={3} className="d-flex flex-wrap justify-content-center align-items-center pe-5">
-        <img src={asesor} alt="Comunícate con nosotros" width={65} height={65} />
-      </Col>
-    </Row>
-  </Container>
-</div>
-
+      
     </>
   );
 };
