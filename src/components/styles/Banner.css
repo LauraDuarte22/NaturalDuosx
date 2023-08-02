@@ -12,7 +12,7 @@
   background-image: none !important;
 }
 .carousel-indicators {
-  margin-bottom: 5rem !important;
+  margin-bottom: 3.5rem !important;
 }
 .carousel-indicators button {
   border-radius: 50% !important;
@@ -38,6 +38,18 @@
 .w-75 {
   width: 75% !important;
 }
+.w-90{
+  width: 90% !important;
+}
+.margins{
+  margin-right: -100px;
+
+}
+.margin-top-banner{
+  margin-top: -50px;
+  margin-right: -50px;
+}
+
 @media only screen and (max-width: 767px) {
 
   .w-70

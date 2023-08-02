@@ -42,17 +42,17 @@ function BannerCarousel() {
   };
 
   return (
-    <Container className="banner d-flex align-items-center justify-content-center">
+    <Container className="banner d-flex align-items-center justify-content-center margin-container">
       <Carousel activeIndex={index} onSelect={handleSelect} interval={4000}>
         {banners.map((banner, idx) => (
           <Carousel.Item key={idx}>
-            <Row className="align-items-center justify-content-center">
+            <Row className="align-items-center justify-content-center my-0 my-md-0">
               {idx === 0 ? (
                 <>
                   <Col
                     xs={12}
                     md={banner.colSizes.md} // The order is the same on md breakpoint
-                    className="text-center align-items-center order-1 order-md-0  my-3 my-md-0"
+                    className="text-center align-items-center order-1 order-md-0  my-3 my-md-0 margins"
                   >
                     <div className="d-flex align-items-center justify-content-center">
                       <img
@@ -68,7 +68,7 @@ function BannerCarousel() {
                   >
                     <div className="slide-content">
                       <img
-                        className={`d-block img-fluid w-70 ${banner.imgClass}`}
+                        className={`d-block img-fluid w-90 ${banner.imgClass}`}
                         src={banner.text}
                         alt="Envío gratis a todo el país"
                       ></img>
@@ -79,11 +79,11 @@ function BannerCarousel() {
                 <>
                   <Col
                     {...banner.colSizes}
-                    className="text-center align-items-center my-3 my-md-0"
+                    className="text-center align-items-center my-3 my-md-0 margins"
                   >
-                    <div className="slide-content">
+                    <div className="slide-content margin-top-banner">
                       <img
-                        className="d-block img-fluid w-100"
+                        className="d-block img-fluid w-90"
                         src={banner.text}
                         alt="Mejora tu salud sin afectar tu rutina"
                       />
@@ -92,7 +92,7 @@ function BannerCarousel() {
                   <Col
                     xs={12}
                     md={12 - banner.colSizes.md}
-                    className="text-center align-items-center my-3 my-md-0"
+                    className="text-center align-items-center my-0 my-md-0"
                   >
                     <div className="d-flex align-items-center justify-content-center">
                       <img
