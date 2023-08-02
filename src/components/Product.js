@@ -13,7 +13,6 @@ const Product = ({ index, imageName }) => {
     setIsHovered(false);
   };
 
-
   return (
     <div
       className={`selected-image-container ${
@@ -22,30 +21,40 @@ const Product = ({ index, imageName }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-    {isHovered &&
-      <div className="background-svg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="204" height="232" viewBox="0 0 204 232" fill="none">
-          <rect width="204" height="231.148" rx="31.0266" fill="url(#paint0_linear_403_145433)"/>
-          <defs>
-            <linearGradient id="paint0_linear_403_145433" x1="102.388" y1="29.8631" x2="102" y2="231.148" gradientUnits="userSpaceOnUse">
-              <stop stop-color="white" stop-opacity="0.46"/>
-              <stop offset="1" stop-color="white" stop-opacity="0.04"/>
-            </linearGradient>
-          </defs>
-        </svg>
-      </div> }
-
-    
       <img
-        className="selected-image image-fluid "
-       
+        className="selected-image image-fluid"
         key={index}
         src={imageName}
         alt={`Producto ${imageName}`}
       />
 
       {/* Texto que se mostrará al hacer hover */}
-      {isHovered && <p className="hover-text">hover</p>}
+      {isHovered && (
+        <p className="hover-text w-20">
+          {/* <span className="fw-bold">Colágeno Hidrolizado</span> con pulpa de uva y vitaminas enfocadas en la revitalización de tu piel y el fortalecimiento del cabello. */}
+          hey
+        </p>
+      )}
+      {isHovered && (
+        <div className="background-svg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="208"
+            height="230"
+            viewBox="0 0 204 232"
+            fill="none"
+            style={{ position: "absolute", bottom: 0, left: 0, zIndex: -1 }}
+          >
+            <rect width="204" height="231.148" rx="31.0266" fill="url(#paint0_linear_403_145433)" />
+            <defs>
+              <linearGradient id="paint0_linear_403_145433" x1="102.388" y1="29.8631" x2="102" y2="231.148" gradientUnits="userSpaceOnUse">
+                <stop stopColor="white" stopOpacity="0.46" />
+                <stop offset="1" stopColor="white" stopOpacity="0.04" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      )}
     </div>
   );
 };

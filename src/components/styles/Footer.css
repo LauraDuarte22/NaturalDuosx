@@ -2,7 +2,6 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
- 
 }
 
 .social-media-links {
@@ -26,4 +25,31 @@ footer {
 .whatsapp-icon {
   width: 60px;
   height: 60px;
+}
+
+.contact-image-container {
+  position: absolute;
+  top: -160px;
+  right: 90px;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .contact-image-container {
+    right: 3%;
+  }
+
+}
+@media (max-width: 740px) {
+  .contact-image-container {
+    right: 5%;
+    top: -190px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .contact-image-container {
+
+    right: 15%;
+  }
 }

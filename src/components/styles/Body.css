@@ -48,18 +48,8 @@
 .product-container-right {
   display: inline-block;
   vertical-align: top;
-  margin: 0px 200px; /* Agregar margen entre las imágenes de los productos */
+  margin: 0px 150px; 
 }
-.nube-container {
-  background: no-repeat center url('/src/assets/Iconos/nube.png');
-  background-size: contain;
-  height: 180px; /* Adjust the height to your preference */
-  padding: 20px 110px; /* Add some padding to create space around the content */
-  position: fixed; /* or position: absolute; */
-  bottom: 30px; /* Adjust the distance from the bottom */
-  right: 10px; /* Adjust the distance from the right */
-}
-
 
 
 

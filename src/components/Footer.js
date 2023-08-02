@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import facebookIcon from "../assets/Iconos/Facebook.png";
 import instagramIcon from "../assets/Iconos/Instagram.png";
 import whatsappIcon from "../assets/Iconos/WhatsApp.png";
-import asesor from "../assets/Iconos/asesor.png";
+import contacto from "../assets/Iconos/contacto.png";
 import "./styles/Footer.css";
 
 const Footer = () => {
@@ -64,43 +64,20 @@ const Footer = () => {
           >
             {" "}
             {isProductPage && (
-              <div className="nube-container">
-                <Container>
-                  <Row>
-                    <Col
-                      xs={12}
-                      md={9}
-                      className="d-flex flex-wrap justify-content-center align-items-center"
-                    >
-                      <p className="text-center">
-                        ¿Tienes dudas?{" "}
-                        <span className="fw-bold">
-                          {" "}
-                          ¡Habla con <br className="d-none d-md-inline" />
-                          un asesor!
-                        </span>
-                        Escríbenos ahora <br className="d-none d-md-inline" />y
-                        recibe tus productos sin
-                        <br className="d-none d-md-inline" /> costo adicional ☺️
-                      </p>
-                    </Col>
-                    <Col
-                      xs={12}
-                      md={3}
-                      className="d-flex flex-wrap justify-content-center align-items-center pe-md-5"
-                    >
-                      <img
-                        src={asesor}
-                        alt="Comunícate con nosotros"
-                        width={65}
-                        height={65}
-                      />
-                    </Col>
-                  </Row>
-                </Container>
+              <div
+                className="p-5 contact-image-container"
+               
+              >
+                <a
+                  href={whatsappLink.url}
+                  target="_blank"
+                  className="text-dark"
+                >
+                  <img src={contacto} className="img-fluid w-100"></img>
+                </a>
               </div>
             )}
-            <a href={whatsappLink.url} target="_blank">
+            <a href={whatsappLink.url} target="_blank" className="text-dark">
               <img
                 src={whatsappLink.icon}
                 alt={whatsappLink.name}
