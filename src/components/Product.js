@@ -3,7 +3,8 @@ import { Container, Col, Row } from "react-bootstrap";
 
 import "./styles/Product.css";
 
-const Product = ({ index, imageName }) => {
+const Product = ({ index, imageName, detalle }) => {
+  console.log(detalle);
   const productData = {
     Colageno: {
       name: "Colageno",
@@ -105,6 +106,7 @@ const Product = ({ index, imageName }) => {
     setIsHovered(false);
   };
 
+
   return (
     <Container onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Row className="justify-content-center">
@@ -112,9 +114,9 @@ const Product = ({ index, imageName }) => {
           <div className="selected-image-container d-flex align-items-center">
             {isHovered && (
               <div className="background-svg">
-                <p className="margin-text text-white">
+                <div className="margin-text text-white">
                   <span className="fw-bold">{title}</span> {text}
-                </p>
+                </div>
               </div>
             )}
             <img
@@ -124,6 +126,19 @@ const Product = ({ index, imageName }) => {
               alt={`Producto ${name}`}
             />
           </div>
+          {isHovered && (
+            <Row className="d-flex justify-content-center contenedor-detalle">
+              {detalle.map((detalleImage, idx) => (
+                <Col xs="4" key={idx}>
+                  <img
+                    src={detalleImage}
+                    alt={`Detalle ${name} - ${idx}`}
+                    className="detalle-image"
+                  />
+                </Col>
+              ))}
+            </Row>
+          )}
         </Col>
       </Row>
     </Container>

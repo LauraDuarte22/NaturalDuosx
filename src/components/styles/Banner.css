@@ -38,22 +38,21 @@
 .w-75 {
   width: 75% !important;
 }
-.w-90{
+.w-90 {
   width: 90% !important;
 }
-.margins{
+.margins {
   margin-right: -100px;
-
 }
-.margin-top-banner{
+.margin-top-banner {
   margin-top: -50px;
   margin-right: -50px;
 }
 
 @media only screen and (max-width: 767px) {
-
-  .w-70
-  {
+  .w-70,
+  .w-90,
+  .w-80 {
     width: 100% !important;
   }
 }

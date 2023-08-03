@@ -15,6 +15,27 @@ import Uronex from "../assets/Productos/Uronex.png";
 import Reuduol from "../assets/Productos/Reuduol.png";
 import Vitaday from "../assets/Productos/Vitaday.png";
 
+import cabello from "../assets/Productos/Beneficios/Cabello.png";
+import Estomagoinstestinos from "../assets/Productos/Beneficios/Estomagoinstestinos.png";
+import Frenteycuello from "../assets/Productos/Beneficios/Frenteycuello.png";
+import Garganta from "../assets/Productos/Beneficios/Garganta.png";
+import garganta1 from "../assets/Productos/Beneficios/garganta1.png"
+import huesos1 from "../assets/Productos/Beneficios/huesos1.png";
+import huesos2 from "../assets/Productos/Beneficios/huesos2.png";
+import manosycodos from "../assets/Productos/Beneficios/manosycodos.png";
+import manosycodos2 from "../assets/Productos/Beneficios/manosycodos2.png"
+import mano from "../assets/Productos/Beneficios/mano.png"
+import musculo from "../assets/Productos/Beneficios/musculo.png";
+import musculo2 from "../assets/Productos/Beneficios/musculo2.png";
+import adbomen from "../assets/Productos/Beneficios/adbomen.png";
+import Piel from "../assets/Productos/Beneficios/Piel.png";
+import Prostata from "../assets/Productos/Beneficios/Prostata.png";
+import Pulmones from "../assets/Productos/Beneficios/Pulmones.png";
+import Sexo from "../assets/Productos/Beneficios/Sexo.png";
+import Tos from "../assets/Productos/Beneficios/Tos.png";
+import Vejiga from "../assets/Productos/Beneficios/Vejiga.png";
+import VitadayBe from "../assets/Productos/Beneficios/Vitaday.png";
+
 import Product from "./Product";
 import "./styles/Body.css";
 
@@ -28,7 +49,13 @@ const BodyComponent = () => {
       link: [1, 3],
       x: 675,
       y: 205,
-      imgName: [vitamina_c, VitadaySure],
+      imgName: {
+        1: {
+          principal: vitamina_c,
+          detalle: [Frenteycuello, Pulmones,Garganta],
+        },
+        2: { principal: VitadaySure, detalle: [VitadayBe] },
+      },
     },
     //Al lado del cerebro
     {
@@ -36,7 +63,12 @@ const BodyComponent = () => {
       link: [2, 5],
       x: 690,
       y: 200,
-      imgName: [colageno],
+      imgName: {
+        1: {
+          principal: colageno,
+          detalle: [cabello, Piel],
+        },
+      },
     },
     //Nariz
     {
@@ -44,7 +76,13 @@ const BodyComponent = () => {
       link: [1, 3],
       x: 675,
       y: 225,
-      imgName: [vitamina_c, VitadaySure],
+      imgName: {
+        1: {
+          principal: vitamina_c,
+          detalle: [cabello, Piel],
+        },
+        2: { principal: VitadaySure, detalle:[VitadayBe] },
+      },
     },
     //Garganta
     {
@@ -52,7 +90,11 @@ const BodyComponent = () => {
       link: [4],
       x: 675,
       y: 255,
-      imgName: [vitamina_c, Euximil, Euximil2],
+      imgName: {
+        1: { principal: vitamina_c, detalle:  [Frenteycuello, Pulmones,Garganta],},
+        2: { principal: Euximil, detalle: [garganta1] },
+        3: { principal: Euximil2, detalle: [Tos] },
+      },
     },
     //Hombro
     {
@@ -60,7 +102,12 @@ const BodyComponent = () => {
       link: [5, 2],
       x: 630,
       y: 260,
-      imgName: [colageno],
+      imgName: {
+        1: {
+          principal: colageno,
+          detalle: [cabello, Piel],
+        },
+      },
     },
     //Corazon
     {
@@ -68,7 +115,12 @@ const BodyComponent = () => {
       link: [6],
       x: 690,
       y: 290,
-      imgName: [AjoUva],
+      imgName: {
+        1: {
+          principal: AjoUva,
+          detalle: [cabello, Piel],
+        },
+      },
     },
     //Pulmón
     {
@@ -76,7 +128,12 @@ const BodyComponent = () => {
       link: [7],
       x: 690,
       y: 320,
-      imgName: [GasPlus],
+      imgName: {
+        1: {
+          principal: GasPlus,
+          detalle: [Estomagoinstestinos],
+        },
+      },
     },
     //Brazo dereho
     {
@@ -84,7 +141,16 @@ const BodyComponent = () => {
       link: [8, 15, 18],
       x: 725,
       y: 335,
-      imgName: [colageno, Reuduol],
+      imgName: {
+        1: {
+          principal: colageno,
+          detalle: [manosycodos],
+        },
+        2: {
+          principal: Reuduol,
+          detalle: [manosycodos2],
+        },
+      },
     },
     //Intestino
     {
@@ -92,7 +158,12 @@ const BodyComponent = () => {
       link: [7, 9, 15],
       x: 690,
       y: 360,
-      imgName: [FibraSlim],
+      imgName: {
+        1: {
+          principal: FibraSlim,
+          detalle: [Estomagoinstestinos],
+        },
+      },
     },
     //Vegija 1
     {
@@ -100,7 +171,16 @@ const BodyComponent = () => {
       link: [10],
       x: 675,
       y: 390,
-      imgName: [Duoprox, Uronex],
+      imgName: {
+        1: {
+          principal: Duoprox,
+          detalle: [Vejiga],
+        },
+        2: {
+          principal: Uronex,
+          detalle: [Vejiga],
+        },
+      },
     },
     //Vegija 2
     {
@@ -108,7 +188,12 @@ const BodyComponent = () => {
       link: [11],
       x: 675,
       y: 405,
-      imgName: [Duoprox],
+      imgName: {
+        1: {
+          principal: Duoprox,
+          detalle: [Prostata],
+        },
+      },
     },
     //Vegija 3
     {
@@ -116,7 +201,12 @@ const BodyComponent = () => {
       link: [12],
       x: 675,
       y: 420,
-      imgName: [Duoprox],
+      imgName: {
+        1: {
+          principal: Duoprox,
+          detalle: [Sexo]
+        },
+      },
     },
     //Hueso derecha
     {
@@ -124,7 +214,20 @@ const BodyComponent = () => {
       link: [13],
       x: 710,
       y: 430,
-      imgName: [colageno, vitamina_d, Reuduol],
+      imgName: {
+        1: {
+          principal: Reuduol,
+          detalle: [huesos1],
+        },
+        2: {
+          principal: vitamina_d,
+          detalle: [VitadayBe],
+        },
+        3: {
+          principal: colageno,
+          detalle: [huesos2],
+        },
+      },
     },
     //Rodilla
     {
@@ -132,7 +235,16 @@ const BodyComponent = () => {
       link: [8, 15, 18],
       x: 650,
       y: 480,
-      imgName: [colageno, Reuduol],
+      imgName: {
+        1: {
+          principal: colageno,
+          detalle: [manosycodos],
+        },
+        2: {
+          principal: Reuduol,
+          detalle: [manosycodos2],
+        },
+      },
     },
     //Tibia
     {
@@ -140,7 +252,16 @@ const BodyComponent = () => {
       link: [16, 17],
       x: 635,
       y: 510,
-      imgName: [Vitaday, Reuduol],
+      imgName: {
+        1: {
+          principal: Vitaday,
+          detalle: [musculo2],
+        },
+        2: {
+          principal: Reuduol,
+          detalle: [adbomen],
+        },
+      },
     },
     //Gemlos
     {
@@ -148,7 +269,16 @@ const BodyComponent = () => {
       link: [16, 17],
       x: 655,
       y: 520,
-      imgName: [Vitaday, Reuduol],
+      imgName: {
+        1: {
+          principal: Vitaday,
+          detalle: [musculo2],
+        },
+        2: {
+          principal: Reuduol,
+          detalle: [adbomen],
+        },
+      },
     },
     //mano
     {
@@ -156,7 +286,16 @@ const BodyComponent = () => {
       link: [8, 15, 17],
       x: 740,
       y: 420,
-      imgName: [colageno, Reuduol],
+      imgName: {
+        1: {
+          principal: colageno,
+          detalle: [manosycodos],
+        },
+        2: {
+          principal: Reuduol,
+          detalle: [manosycodos2],
+        },
+      },
     },
   ];
   const handlePointClick = (pointId) => {
@@ -171,9 +310,16 @@ const BodyComponent = () => {
       const leftImages = [];
       const rightImages = [];
       let count = 0;
-      point.imgName.forEach((imageName, index) => {
+      Object.keys(point.imgName).forEach((key, index) => {
+        const imageName = point.imgName[key];
+
         const product = (
-          <Product key={index} index={index} imageName={imageName} />
+          <Product
+            key={index}
+            index={index}
+            imageName={imageName.principal}
+            detalle={imageName.detalle}
+          />
         );
 
         // Agregar imágenes a la izquierda o derecha según su posición en el array
@@ -185,9 +331,7 @@ const BodyComponent = () => {
         count++;
       });
       const containerClass =
-        point.imgName.length > 1
-          ? "product-container-left"
-          : "product-container-left-unique";
+        count != 1 ? "product-container-left" : "product-container-left-unique";
 
       return (
         <div>

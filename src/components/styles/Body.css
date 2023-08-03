@@ -45,15 +45,19 @@
   display: inline-block;
   vertical-align: top;
   margin: 80px 150px;
- 
+}
+.product-container-right{
+  display: inline-block;
+  vertical-align: top;
+  margin: 80px 100px;
 }
 
 .product-container-left-unique {
   display: inline-block;
   vertical-align: top;
-  margin: 150px 10px;
-  padding-right: 5rem;
+  margin: 150px 40px;
+  padding-right: 10rem;
 }
 .image-3 .selected-image {
-  margin-top: 40px; /* Ajusta el valor según el espacio deseado */
+  margin-top: 80px;
 }
