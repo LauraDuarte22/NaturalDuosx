@@ -13,7 +13,7 @@ function Header() {
     let handler = (e) => {
       if (!menuRef.current.contains(e.target)) {
         setIsMenuOpen(false);
-        console.log(menuRef.current);
+       
       }
     };
 

@@ -56,7 +56,7 @@ function BannerCarousel() {
                   >
                     <div className="d-flex align-items-center justify-content-center">
                       <img
-                        className={`d-block img-fluid w-40 ${banner.imgClass}`}
+                        className='d-block img-fluid w-40'
                         src={banner.image}
                         alt="Envío gratis a todo el país"
                       />
@@ -68,7 +68,7 @@ function BannerCarousel() {
                   >
                     <div className="slide-content">
                       <img
-                        className={`d-block img-fluid w-90 ${banner.imgClass}`}
+                        className='d-block img-fluid w-75'
                         src={banner.text}
                         alt="Envío gratis a todo el país"
                       ></img>

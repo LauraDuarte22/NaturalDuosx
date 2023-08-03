@@ -170,6 +170,7 @@ const BodyComponent = () => {
       // Filtrar imágenes para la izquierda y la derecha
       const leftImages = [];
       const rightImages = [];
+      let count = 0;
       point.imgName.forEach((imageName, index) => {
         const product = (
           <Product key={index} index={index} imageName={imageName} />
@@ -181,11 +182,19 @@ const BodyComponent = () => {
         } else {
           rightImages.push(product);
         }
+        count++;
       });
+      const containerClass =
+        point.imgName.length > 1
+          ? "product-container-left"
+          : "product-container-left-unique";
 
       return (
         <div>
-          <div className="product-container-left">{leftImages}</div>
+          <div className={`${containerClass} ${count === 3 ? "image-3" : ""}`}>
+            {leftImages}
+          </div>
+
           <div className="product-container-right">{rightImages}</div>
         </div>
       );
@@ -247,7 +256,6 @@ const BodyComponent = () => {
           </Col>
         </Row>
       </Container>
-      
     </>
   );
 };

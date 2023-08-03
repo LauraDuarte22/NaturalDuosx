@@ -39,17 +39,21 @@
 .product-container {
   position: absolute;
 }
-.selected-image {
-  display: block;
-  margin: 10px auto;
-}
 
 .product-container-left,
 .product-container-right {
   display: inline-block;
   vertical-align: top;
-  margin: 0px 150px; 
+  margin: 80px 150px;
+ 
 }
 
-
-
+.product-container-left-unique {
+  display: inline-block;
+  vertical-align: top;
+  margin: 150px 10px;
+  padding-right: 5rem;
+}
+.image-3 .selected-image {
+  margin-top: 40px; /* Ajusta el valor según el espacio deseado */
+}

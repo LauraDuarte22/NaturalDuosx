@@ -1,37 +1,59 @@
-
-.background-svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none; 
-}
-
 .selected-image-container {
   position: relative;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  transition: transform 0.3s ease;
+
 }
 
 .selected-image {
-  display: block;
-  margin: 10px auto;
-  width: 150px;
   position: relative;
+  width: 230px;
   z-index: 2;
-}
+  margin: 0 auto;
+  bottom: 120px;
+  right: 20px;
+ 
 
+}
 
 .hover-text {
   display: none;
   color: #fff;
-
 }
 
 .selected-image-container:hover .hover-text {
   display: block;
+
+}
+.selected-image-container:hover .selected-image {
+  /* Apply the zoom effect on hover by scaling up the image */
+  transform: scale(1.1);
 }
 
+.background-svg {
+  position: absolute;
+  width: 200%; /* Ajustar el tamaño del fondo */
+  height: 100%; /* Ajustar el tamaño del fondo */
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='218' height='250' viewBox='0 0 204 232' fill='none'%3E%3Crect width='204' height='231.148' rx='31.0266' fill='url(%23paint0_linear_403_145433)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_403_145433' x1='102.388' y1='29.8631' x2='102' y2='231.148' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white' stop-opacity='0.46'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0.04'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; /* Ajustar la escala del fondo */
+  padding: 10px 10px;
+  z-index: 1;
+}
+.margin-text {
+  margin-top: 7rem;
+  position: relative;
+  z-index: 2;
+  font-size: 13px;
+}
