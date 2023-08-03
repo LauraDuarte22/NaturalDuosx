@@ -55,4 +55,11 @@
   .w-80 {
     width: 100% !important;
   }
+  .margins {
+    margin-right: 0px;
+  }
+  .margin-top-banner {
+    margin-top: 0px;
+    margin-right: 0px;
+  }
 }
