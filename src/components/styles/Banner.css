@@ -35,7 +35,8 @@
 .w-70 {
   width: 70% !important;
 }
-.w-75 {
+.w-75,
+.w-75-special {
   width: 75% !important;
 }
 .w-90 {
@@ -52,6 +53,7 @@
 @media only screen and (max-width: 767px) {
   .w-70,
   .w-90,
+  .w-75-special,
   .w-80 {
     width: 100% !important;
   }

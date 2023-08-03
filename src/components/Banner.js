@@ -68,7 +68,7 @@ function BannerCarousel() {
                   >
                     <div className="slide-content">
                       <img
-                        className='d-block img-fluid w-75'
+                        className='d-block img-fluid w-75-special'
                         src={banner.text}
                         alt="Envío gratis a todo el país"
                       ></img>
