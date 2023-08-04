@@ -11,14 +11,12 @@
 .carousel-control-next-icon {
   background-image: none !important;
 }
-.carousel-indicators {
-  margin-bottom: 3.5rem !important;
-}
+
 .carousel-indicators button {
   border-radius: 50% !important;
-  width: 15px !important;
-  height: 15px !important;
-  margin: 0 8px !important;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 2px !important;
 }
 
 @media (max-width: 767px) {

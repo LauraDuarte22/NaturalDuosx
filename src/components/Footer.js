@@ -38,7 +38,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="fixed-bottom">
+    <footer className="">
       <Container>
         <Row>
           <Col
@@ -47,7 +47,7 @@ const Footer = () => {
             className="d-flex justify-content-center justify-content-sm-start mb-2 mb-sm-0"
           >
             {socialMediaLinks.map((link, index) => (
-              <a key={index} href={link.url} className="me-3" target="_blank">
+              <a key={index} href={link.url} className="me-1" target="_blank">
                 <img
                   src={link.icon}
                   alt={link.name}
