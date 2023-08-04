@@ -42,6 +42,9 @@ a:hover {
   transition: transform 0.2s ease-in; /* Agregar una transición suave al desplazar */
   z-index: 2;
 }
+.no-show-navbar{
+  display: none;
+}
 
 
 @media only screen and (max-width: 981px) {

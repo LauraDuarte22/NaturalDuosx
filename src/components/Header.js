@@ -51,7 +51,8 @@ function Header() {
                 }}
                 className="navbar-toggler"
               />
-              <Navbar.Collapse id="navbar-nav" in={isMenuOpen}>
+              <Navbar.Collapse id="navbar-nav" in={isMenuOpen}
+               className={` ${!isMenuOpen ? "no-show-navbar" : ""}`}>
                 <Nav className="ml-auto">
                   <Nav.Link
                     as={Link}
