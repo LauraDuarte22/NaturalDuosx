@@ -27,6 +27,9 @@ function Header() {
     setIsMenuOpen(false);
     navigate(url);
   };
+  const handleMenuToggle = () => {
+    setIsMenuOpen(false);
+  };
   return (
     <Container fluid>
       <Row className="align-items-center mx-5 my-3">
@@ -51,8 +54,11 @@ function Header() {
                 }}
                 className="navbar-toggler"
               />
-              <Navbar.Collapse id="navbar-nav" in={isMenuOpen}
-               className={` ${!isMenuOpen ? "no-show-navbar" : ""}`}>
+              <Navbar.Collapse
+                id="navbar-nav"
+                in={isMenuOpen}
+                onToggle={handleMenuToggle}
+              >
                 <Nav className="ml-auto">
                   <Nav.Link
                     as={Link}
@@ -68,7 +74,6 @@ function Header() {
                     to="/nosotros"
                     onClick={() => handleMenuOptionClick("/nosotros")}
                     className="fs-3 text-white p-5 text-center"
-
                   >
                     Nosotros
                   </Nav.Link>
