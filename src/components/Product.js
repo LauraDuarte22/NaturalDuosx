@@ -113,7 +113,7 @@ const Product = ({ index, imageName, detalle }) => {
         <Col xs="12" md="6">
           <div
             className={`selected-image-container d-flex align-items-center ${
-              index == 2 ? "special-css-class" : ""
+              index === 2 ? "special-css-class" : ""
             }`}
           >
             {isHovered && (

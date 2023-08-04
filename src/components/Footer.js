@@ -38,56 +38,47 @@ const Footer = () => {
   };
 
   return (
-    <footer className="">
-      <Container>
-        <Row>
-          <Col
-            xs={6}
-            sm={6}
-            className="d-flex justify-content-center justify-content-sm-start mb-2 mb-sm-0"
-          >
-            {socialMediaLinks.map((link, index) => (
-              <a key={index} href={link.url} className="me-1" target="_blank">
-                <img
-                  src={link.icon}
-                  alt={link.name}
-                  width={link.width}
-                  height={link.height}
-                />
-              </a>
-            ))}
-          </Col>
-          <Col
-            xs={6}
-            sm={6}
-            className="d-flex justify-content-center justify-content-sm-end"
-          >
-            {" "}
-            {isProductPage && (
-              <div
-                className="p-5 contact-image-container"
-               
-              >
-                <a
-                  href={whatsappLink.url}
-                  target="_blank"
-                  className="text-dark"
-                >
-                  <img src={contacto} className="img-fluid w-100"></img>
-                </a>
-              </div>
-            )}
-            <a href={whatsappLink.url} target="_blank" className="text-dark">
+    <footer>
+      <Row className="ml-5">
+        <Col
+          xs={6}
+          sm={6}
+          className="d-flex justify-content-center justify-content-sm-start mb-2 mb-sm-0"
+        >
+          {socialMediaLinks.map((link, index) => (
+            <a key={index} href={link.url} className="me-1" target="_blank">
               <img
-                src={whatsappLink.icon}
-                alt={whatsappLink.name}
-                width={whatsappLink.width}
-                height={whatsappLink.height}
+                src={link.icon}
+                alt={link.name}
+                width={link.width}
+                height={link.height}
               />
             </a>
-          </Col>
-        </Row>
-      </Container>
+          ))}
+        </Col>
+        <Col
+          xs={6}
+          sm={6}
+          className="d-flex justify-content-center justify-content-sm-end"
+        >
+          {" "}
+          {isProductPage && (
+            <div className="p-5 contact-image-container">
+              <a href={whatsappLink.url} target="_blank" className="text-dark">
+                <img src={contacto} className="img-fluid w-100"></img>
+              </a>
+            </div>
+          )}
+          <a href={whatsappLink.url} target="_blank" className="text-dark mx-6">
+            <img
+              src={whatsappLink.icon}
+              alt={whatsappLink.name}
+              width={whatsappLink.width}
+              height={whatsappLink.height}
+            />
+          </a>
+        </Col>
+      </Row>
     </footer>
   );
 };

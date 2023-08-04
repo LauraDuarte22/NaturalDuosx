@@ -2,7 +2,6 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
- 
 }
 
 .social-media-links {
@@ -36,23 +35,50 @@ footer {
   z-index: 2;
   width: 23%;
 }
-@media (max-width: 768px) {
+.ml-5 {
+  margin: 0.5rem !important;
+}
+.mx-6{
+  margin-right: 1.5rem !important;
+  margin-left: 1.5rem !important;
+}
+@media only screen and (max-width: 768px) {
   .contact-image-container {
     right: 3%;
   }
-
 }
-@media (max-width: 740px) {
+@media only screen and (max-width: 740px) {
   .contact-image-container {
     right: 5%;
     top: -190px;
   }
-
 }
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   .contact-image-container {
-
     right: 15%;
   }
+  .mx-6 {
+    margin-right: -0.5rem !important;
+    margin-left: 10.5rem !important;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .mx-6 {
+    margin-right: 1.5rem !important;
+    margin-left: 10.5rem !important;
+  }
+}
+@media only screen and (min-width: 375px) {
+  .mx-6 {
+    margin-right: 1.5rem !important;
+    margin-left: 7.5rem !important;
+  }
+}
+@media only screen and (min-width: 280px) {
+  .mx-6 {
+    margin-right: 1.5rem !important;
+    margin-left: 5.5rem !important;
+  }
+  
 }
