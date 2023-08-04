@@ -312,8 +312,7 @@ const BodyComponent = () => {
       const leftImages = [];
       const rightImages = [];
       let count = 0;
-      let lastImageIndex = "";
-      let isThirdImage = false;
+
       Object.keys(point.imgName).forEach((key, index) => {
         const imageName = point.imgName[key];
 

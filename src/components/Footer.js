@@ -52,6 +52,7 @@ const Footer = () => {
                 alt={link.name}
                 width={link.width}
                 height={link.height}
+                rel="noopener noreferrer"
               />
             </a>
           ))}
@@ -64,7 +65,7 @@ const Footer = () => {
           {" "}
           {isProductPage && (
             <div className="p-5 contact-image-container">
-              <a href={whatsappLink.url} target="_blank" className="text-dark">
+              <a href={whatsappLink.url} target="_blank" className="text-dark" rel="noopener noreferrer">
                 <img src={contacto} className="img-fluid w-100"></img>
               </a>
             </div>

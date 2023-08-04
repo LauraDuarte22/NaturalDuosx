@@ -36,10 +36,17 @@ a:hover {
   width: 25px;
   height: 25px;
 }
+.show-navbar {
+  height: 100%; /* Hacer que la barra de navegación ocupe toda la altura */
+  transform: translateY(0); /* Desplazar hacia abajo (0px) */
+  transition: transform 0.3s ease-in-out; /* Agregar una transición suave al desplazar */
+}
+
+
 @media only screen and (max-width: 981px) {
   .navbar-collapse {
     position: absolute;
-    top: 40px;
+    top: -60px;
     left: -75px;
     border-radius: 0px 0px 45px 0px;
     width: 217px;

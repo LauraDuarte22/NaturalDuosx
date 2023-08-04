@@ -13,6 +13,8 @@ const banners = [
   {
     image: image1,
     text: text1,
+    altText: "Envío de productos gratis a todo Colombia",
+    altText2: "Descubre nuestros productos y disfruta de envío gratis",
     colSizes: {
       sm: 12,
       md: 6,
@@ -21,6 +23,8 @@ const banners = [
   {
     image: image2,
     text: text2,
+    altText:"Mejora tu salud",
+    altText2:"Mejora tu salud con nuestros productos",
     colSizes: {
       sm: 12,
       md: 6,
@@ -29,6 +33,8 @@ const banners = [
   {
     image: image3,
     text: text3,
+    altText:"Productos con stevia",
+    altText2:"Todos nuestros productos están endulzados con stevia",
     colSizes: {
       sm: 12,
       md: 6,
@@ -58,7 +64,7 @@ function BannerCarousel() {
                       <img
                         className='d-block img-fluid w-40'
                         src={banner.image}
-                        alt="Envío gratis a todo el país"
+                        alt={banner.altText}
                       />
                     </div>
                   </Col>
@@ -70,7 +76,7 @@ function BannerCarousel() {
                       <img
                         className='d-block img-fluid w-75-special'
                         src={banner.text}
-                        alt="Envío gratis a todo el país"
+                        alt={banner.altText2}
                       ></img>
                     </div>
                   </Col>
@@ -85,7 +91,7 @@ function BannerCarousel() {
                       <img
                         className="d-block img-fluid w-90"
                         src={banner.text}
-                        alt="Mejora tu salud sin afectar tu rutina"
+                        alt={banner.altText}
                       />
                     </div>
                   </Col>
@@ -98,7 +104,7 @@ function BannerCarousel() {
                       <img
                         className="d-block img-fluid w-75"
                         src={banner.image}
-                        alt="Mejora tu salud sin afectar tu rutina"
+                        alt={banner.altText2}
                       />
                     </div>
                   </Col>

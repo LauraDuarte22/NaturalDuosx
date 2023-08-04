@@ -73,30 +73,8 @@ const Product = ({ index, imageName, detalle }) => {
     },
   };
   const [isHovered, setIsHovered] = useState(false);
-  const regex = /\/([^/.]+)\./;
-  let word = "";
-  let title = "";
-  let text = "";
-  let name = "";
-
-  const match = imageName.match(regex);
-  if (match && match[1]) {
-    word = match[1];
-  }
-  let matchedProduct = null; // Variable para almacenar el objeto coincidente
-  Object.keys(productData).some((key) => {
-    if (key.includes(word)) {
-      matchedProduct = productData[key];
-      return true; // Salir del loop cuando se encuentra una coincidencia
-    }
-    return false;
-  });
-  if (matchedProduct) {
-    // Acceder a los campos name, title y text del objeto coincidente
-    name = matchedProduct.name;
-    title = matchedProduct.title;
-    text = matchedProduct.text;
-  }
+  const name = Object.keys(productData)[index];
+  const { title, text } = productData[name];
 
   const handleMouseEnter = () => {
     setIsHovered(true);

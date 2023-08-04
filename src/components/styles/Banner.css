@@ -48,6 +48,13 @@
   margin-right: -50px;
 }
 
+@media only screen and (max-width: 990px) {
+
+  .margin-top-banner {
+    margin-top: 0px;
+    margin-right: 0px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .w-70,
   .w-90,
@@ -56,10 +63,6 @@
     width: 100% !important;
   }
   .margins {
-    margin-right: 0px;
-  }
-  .margin-top-banner {
-    margin-top: 0px;
     margin-right: 0px;
   }
 }
