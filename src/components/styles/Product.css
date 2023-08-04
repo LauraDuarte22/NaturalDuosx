@@ -10,11 +10,11 @@
 
 .selected-image {
   position: relative;
-  width: 230px;
+  width: 170px;
   z-index: 2;
   margin: 0 auto;
-  bottom: 120px;
-  right: 20px;
+  bottom: 110px;
+  right: 5px;
 }
 
 .hover-text {
@@ -31,44 +31,47 @@
 
 .background-svg {
   position: absolute;
-  width: 200%; 
-  height: 90%; 
+  width: 270%;
+  height: 110%;
   top: 0;
   left: 0;
   pointer-events: none;
   display: flex;
+  flex-direction: column; /* Arrange elements vertically */
   justify-content: center;
   align-items: center;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='218' height='250' viewBox='0 0 204 232' fill='none'%3E%3Crect width='204' height='231.148' rx='31.0266' fill='url(%23paint0_linear_403_145433)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_403_145433' x1='102.388' y1='29.8631' x2='102' y2='231.148' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white' stop-opacity='0.46'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0.04'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 10px 5px;
-  
+  padding: 15px 10px;
   z-index: 1;
 }
+
 .margin-text {
-  margin-top: 7rem;
+  margin-top: 2rem; /* Adjust the spacing as needed */
   position: relative;
   z-index: 2;
   font-size: 13px;
- }
-.detalle-image{
-  height: 25px;
-  width: 25px;
+}
+
+.selected-image-inside-background {
+  position: absolute;
+  top: 50%; /* Adjust the position as needed */
+  left: 50%; /* Adjust the position as needed */
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+
+
+.detalle-image {
+  max-width: 100px;
+  margin: 5px; /* Adjust the spacing as needed */
+  height: 45px;
+  width: 45px;
   background-repeat: no-repeat;
   background-position: 50%;
   border-radius: 50%;
-  background-size: 50% auto; 
-}
-.margin-text {
-  margin-bottom: 10px; /* Adjust this value as per your preference */
-}
-
-.detalle-image {
-  max-width: 100%;
-}
-
-.contenedor-detalle {
-  margin-top: 10px; /* Adjust this value as per your preference */
+  background-size: 50% auto;
 }

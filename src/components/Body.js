@@ -19,12 +19,12 @@ import cabello from "../assets/Productos/Beneficios/Cabello.png";
 import Estomagoinstestinos from "../assets/Productos/Beneficios/Estomagoinstestinos.png";
 import Frenteycuello from "../assets/Productos/Beneficios/Frenteycuello.png";
 import Garganta from "../assets/Productos/Beneficios/Garganta.png";
-import garganta1 from "../assets/Productos/Beneficios/garganta1.png"
+import garganta1 from "../assets/Productos/Beneficios/garganta1.png";
 import huesos1 from "../assets/Productos/Beneficios/huesos1.png";
 import huesos2 from "../assets/Productos/Beneficios/huesos2.png";
 import manosycodos from "../assets/Productos/Beneficios/manosycodos.png";
-import manosycodos2 from "../assets/Productos/Beneficios/manosycodos2.png"
-import mano from "../assets/Productos/Beneficios/mano.png"
+import manosycodos2 from "../assets/Productos/Beneficios/manosycodos2.png";
+import mano from "../assets/Productos/Beneficios/mano.png";
 import musculo from "../assets/Productos/Beneficios/musculo.png";
 import musculo2 from "../assets/Productos/Beneficios/musculo2.png";
 import adbomen from "../assets/Productos/Beneficios/adbomen.png";
@@ -52,7 +52,7 @@ const BodyComponent = () => {
       imgName: {
         1: {
           principal: vitamina_c,
-          detalle: [Frenteycuello, Pulmones,Garganta],
+          detalle: [Frenteycuello, Pulmones, Garganta],
         },
         2: { principal: VitadaySure, detalle: [VitadayBe] },
       },
@@ -81,7 +81,7 @@ const BodyComponent = () => {
           principal: vitamina_c,
           detalle: [cabello, Piel],
         },
-        2: { principal: VitadaySure, detalle:[VitadayBe] },
+        2: { principal: VitadaySure, detalle: [VitadayBe] },
       },
     },
     //Garganta
@@ -91,7 +91,10 @@ const BodyComponent = () => {
       x: 675,
       y: 255,
       imgName: {
-        1: { principal: vitamina_c, detalle:  [Frenteycuello, Pulmones,Garganta],},
+        1: {
+          principal: vitamina_c,
+          detalle: [Frenteycuello, Pulmones, Garganta],
+        },
         2: { principal: Euximil, detalle: [garganta1] },
         3: { principal: Euximil2, detalle: [Tos] },
       },
@@ -204,7 +207,7 @@ const BodyComponent = () => {
       imgName: {
         1: {
           principal: Duoprox,
-          detalle: [Sexo]
+          detalle: [Sexo],
         },
       },
     },
@@ -306,10 +309,11 @@ const BodyComponent = () => {
 
   const renderImages = (point) => {
     if (selectedPoint === point.id) {
-      // Filtrar imágenes para la izquierda y la derecha
       const leftImages = [];
       const rightImages = [];
       let count = 0;
+      let lastImageIndex = "";
+      let isThirdImage = false;
       Object.keys(point.imgName).forEach((key, index) => {
         const imageName = point.imgName[key];
 
@@ -322,7 +326,6 @@ const BodyComponent = () => {
           />
         );
 
-        // Agregar imágenes a la izquierda o derecha según su posición en el array
         if (index % 2 === 0) {
           leftImages.push(product);
         } else {
@@ -330,14 +333,16 @@ const BodyComponent = () => {
         }
         count++;
       });
+
+      // Paso 3: Agregar la clase CSS especial solo si es la tercera imagen
       const containerClass =
-        count != 1 ? "product-container-left" : "product-container-left-unique";
+        count !== 1
+          ? "product-container-left"
+          : "product-container-left-unique";
 
       return (
         <div>
-          <div className={`${containerClass} ${count === 3 ? "image-3" : ""}`}>
-            {leftImages}
-          </div>
+          <div className={`${containerClass}`}>{leftImages}</div>
 
           <div className="product-container-right">{rightImages}</div>
         </div>
@@ -345,7 +350,6 @@ const BodyComponent = () => {
     }
     return null;
   };
-
   return (
     <>
       <Container

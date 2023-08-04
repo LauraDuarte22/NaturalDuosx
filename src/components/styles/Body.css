@@ -40,16 +40,15 @@
   position: absolute;
 }
 
-.product-container-left,
+.product-container-left{
+  display: inline-block;
+  vertical-align: top;
+  margin: 150px 105px;
+}
 .product-container-right {
   display: inline-block;
   vertical-align: top;
-  margin: 80px 150px;
-}
-.product-container-right{
-  display: inline-block;
-  vertical-align: top;
-  margin: 80px 100px;
+  margin: 150px 80px;
 }
 
 .product-container-left-unique {
@@ -58,6 +57,9 @@
   margin: 150px 40px;
   padding-right: 10rem;
 }
-.image-3 .selected-image {
-  margin-top: 80px;
+.special-css-class {
+  margin-top: 90px;
 }
+/*
+
+*/

@@ -105,18 +105,33 @@ const Product = ({ index, imageName, detalle }) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-
+  console.log(index, imageName);
 
   return (
     <Container onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Row className="justify-content-center">
         <Col xs="12" md="6">
-          <div className="selected-image-container d-flex align-items-center">
+          <div
+            className={`selected-image-container d-flex align-items-center ${
+              index == 2 ? "special-css-class" : ""
+            }`}
+          >
             {isHovered && (
               <div className="background-svg">
                 <div className="margin-text text-white">
                   <span className="fw-bold">{title}</span> {text}
                 </div>
+                <Row className="contenedor-detalle">
+                  {detalle.map((detalleImage, idx) => (
+                    <Col xs="4" key={idx}>
+                      <img
+                        src={detalleImage}
+                        alt={`Detalle ${name} - ${idx}`}
+                        className="detalle-image"
+                      />
+                    </Col>
+                  ))}
+                </Row>
               </div>
             )}
             <img
@@ -126,19 +141,6 @@ const Product = ({ index, imageName, detalle }) => {
               alt={`Producto ${name}`}
             />
           </div>
-          {isHovered && (
-            <Row className="d-flex justify-content-center contenedor-detalle">
-              {detalle.map((detalleImage, idx) => (
-                <Col xs="4" key={idx}>
-                  <img
-                    src={detalleImage}
-                    alt={`Detalle ${name} - ${idx}`}
-                    className="detalle-image"
-                  />
-                </Col>
-              ))}
-            </Row>
-          )}
         </Col>
       </Row>
     </Container>
