@@ -39,7 +39,8 @@ a:hover {
 .show-navbar {
   height: 100%; /* Hacer que la barra de navegación ocupe toda la altura */
   transform: translateY(0); /* Desplazar hacia abajo (0px) */
-  transition: transform 0.3s ease-in-out; /* Agregar una transición suave al desplazar */
+  transition: transform 0.2s ease-in; /* Agregar una transición suave al desplazar */
+  z-index: 2;
 }
 
 
