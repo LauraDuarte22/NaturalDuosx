@@ -13,8 +13,8 @@
   width: 170px;
   z-index: 2;
   margin: 0 auto;
-  bottom: 110px;
-  right: 5px;
+  bottom: 120px;
+
 }
 
 .hover-text {
@@ -62,14 +62,18 @@
   transform: translate(-50%, -50%);
   z-index: 2;
 }
-
+.contenedor-detalle{
+  padding: 0!important;
+  margin-right: 0!important;
+  margin-left: 0!important;
+  --bs-gutter-x: 0.5rem!important;
+}
 
 
 .detalle-image {
   max-width: 100px;
-  margin: 5px; /* Adjust the spacing as needed */
-  height: 45px;
-  width: 45px;
+  height: 35px;
+  width: 35px;
   background-repeat: no-repeat;
   background-position: 50%;
   border-radius: 50%;

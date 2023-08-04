@@ -123,7 +123,7 @@ const Product = ({ index, imageName, detalle }) => {
                 </div>
                 <Row className="contenedor-detalle">
                   {detalle.map((detalleImage, idx) => (
-                    <Col xs="4" key={idx}>
+                    <Col  key={idx}>
                       <img
                         src={detalleImage}
                         alt={`Detalle ${name} - ${idx}`}
