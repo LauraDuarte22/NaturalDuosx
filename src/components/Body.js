@@ -339,7 +339,7 @@ const BodyComponent = () => {
       const containerClass =
         count !== 1
           ? selectedLinkedPoints.includes(point.id)
-            ? "product-container-left linked"
+            ? "product-container-left"
             : "product-container-left"
           : "product-container-left-unique";
   
@@ -375,7 +375,7 @@ const BodyComponent = () => {
                     className={`point ${
                       selectedPoint === point.id ? "selected" : ""
                     } ${
-                      selectedLinkedPoints.includes(point.id) ? "linked" : ""
+                      selectedLinkedPoints.includes(point.id) ? "selected" : ""
                     }`}
                     style={{
                       bottom: point.y,

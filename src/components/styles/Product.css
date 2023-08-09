@@ -1,5 +1,21 @@
-.parent-container {
+.product-container {
+  display: flex;
+  justify-content: center;
   max-width: 100%;
+}
+
+.selected-image-container {
+  display: flex;
+  width: 50%; /* Ocupa el 50% del espacio disponible */
+  justify-content: center;
+}
+
+.left {
+  order: 1; /* Cambia el orden a 1 (izquierda) */
+}
+
+.right {
+  order: 2; /* Cambia el orden a 2 (derecha) */
 }
 
 .selected-image-container {
@@ -81,7 +97,7 @@
   border-radius: 50%;
   background-size: 50% auto;
 }
-@media (max-width: 760px) {
+@media (max-width: 70px) {
   .selected-image-container {
     width: 40%;
   }

@@ -103,7 +103,7 @@ const Product = ({ index, imageName, detalle }) => {
                   </div>
                   <Row className="contenedor-detalle">
                     {detalle.map((detalleImage, idx) => (
-                      <Col key={idx} xs="6" md="4">
+                     <Col xs="12" md="6" lg="4">
                         {" "}
                         {/* Adjust columns based on your design */}
                         <img
