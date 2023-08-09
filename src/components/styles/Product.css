@@ -1,3 +1,10 @@
+.parent-container {
+  max-width: 100%;
+}
+
+.selected-image-container {
+  position: relative;
+}
 .selected-image-container {
   position: relative;
   display: flex;
@@ -49,7 +56,7 @@
 }
 
 .margin-text {
-  margin-top: 2rem; /* Adjust the spacing as needed */
+  margin-top: 2rem;
   position: relative;
   z-index: 2;
   font-size: 13px;
@@ -57,8 +64,8 @@
 
 .selected-image-inside-background {
   position: absolute;
-  top: 50%; /* Adjust the position as needed */
-  left: 50%; /* Adjust the position as needed */
+  top: 50%; 
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
 }
@@ -71,9 +78,9 @@
 
 
 .detalle-image {
-  max-width: 100px;
-  height: 35px;
-  width: 35px;
+
+  height: auto; 
+  max-width: 35px;
   background-repeat: no-repeat;
   background-position: 50%;
   border-radius: 50%;

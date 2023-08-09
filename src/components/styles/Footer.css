@@ -30,55 +30,96 @@ footer {
 
 .contact-image-container {
   position: absolute;
-  top: -120px;
-  right: 20px;
-  z-index: 2;
-  width: 23%;
+  bottom: 15%;
+  left: 82%;
 }
 .ml-5 {
   margin: 0.5rem !important;
 }
-.mx-6{
+.mx-6 {
   margin-right: 1.5rem !important;
   margin-left: 1.5rem !important;
 }
-@media only screen and (max-width: 768px) {
+
+@media (max-width: 1610px) {
   .contact-image-container {
-    right: 3%;
-  }
-}
-@media only screen and (max-width: 740px) {
-  .contact-image-container {
-    right: 5%;
-    top: -190px;
+    left: 77%;
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media (max-width: 1335px) {
   .contact-image-container {
-    right: 15%;
-  }
-  .mx-6 {
-    margin-right: -0.5rem !important;
-    margin-left: 10.5rem !important;
+    left: 75%;
   }
 }
-@media only screen and (max-width: 530px) {
-  .mx-6 {
-    margin-right: 1.5rem !important;
-    margin-left: 10.5rem !important;
+@media (max-width: 1218px) {
+  .contact-image-container {
+    left: 72%;
   }
 }
-@media only screen and (min-width: 375px) {
-  .mx-6 {
-    margin-right: 1.5rem !important;
-    margin-left: 7.5rem !important;
+@media (max-width: 1089px) {
+  .contact-image-container {
+    left: 67%;
   }
 }
-@media only screen and (min-width: 280px) {
-  .mx-6 {
-    margin-right: 1.5rem !important;
-    margin-left: 5.5rem !important;
+@media (max-width: 930px) {
+  .contact-image-container {
+    left: 64%;
   }
-  
+}
+@media (max-width: 825px) {
+  .contact-image-container {
+    left: 60%;
+  }
+}
+
+@media (max-width: 668px) {
+  .contact-image-container {
+    left: 57%;
+  }
+}
+@media (max-width: 642px) {
+  .contact-image-container {
+    left: 55%;
+  }
+}
+@media (max-width: 590px) {
+  .contact-image-container {
+    left: 47%;
+  }
+}
+@media (max-width: 490px) {
+  .contact-image-container {
+    left: 40%;
+  }
+}
+@media (max-width: 450px) {
+  .contact-image-container {
+    left: 30%;
+  }
+}
+@media (max-width: 400px) {
+  .contact-image-container {
+    left: 25%;
+  }
+}
+@media (max-width: 380px) {
+  .contact-image-container {
+    left: 20%;
+  }
+}
+@media (max-width: 340px) {
+  .contact-image-container {
+    left: 15%;
+  }
+}
+
+@media (max-width: 280px) {
+  .contact-image-container img {
+    width: 70% !important;
+  }
+  .contact-image-container {
+    left: 30%;
+    bottom: 35%;
+  }
 }

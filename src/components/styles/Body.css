@@ -10,7 +10,9 @@
     transform: scale(1);
   }
 }
-
+.mb-5-body{
+  margin-bottom: 9rem !important;
+}
 .point {
   position: absolute;
   width: 15px;

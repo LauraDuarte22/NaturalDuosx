@@ -353,7 +353,7 @@ const BodyComponent = () => {
     <>
       <Container
         fluid
-        className="d-flex align-items-center justify-content-center"
+        className="d-flex align-items-center justify-content-center mb-5-body"
       >
         <Row>
           <Col md={4} className="d-flex flex-wrap justify-content-center">
