@@ -46,13 +46,13 @@ const Footer = () => {
           className="d-flex justify-content-center justify-content-sm-start mb-2 mb-sm-0"
         >
           {socialMediaLinks.map((link, index) => (
-            <a key={index} href={link.url} className="me-1" target="_blank">
+            <a key={index} href={link.url} className="me-1" target="_blank"  rel="noopener noreferrer">
               <img
                 src={link.icon}
                 alt={link.name}
                 width={link.width}
                 height={link.height}
-                rel="noopener noreferrer"
+               
               />
             </a>
           ))}

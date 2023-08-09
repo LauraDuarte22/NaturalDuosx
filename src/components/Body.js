@@ -47,8 +47,8 @@ const BodyComponent = () => {
     {
       id: 1,
       link: [1, 3],
-      x: 675,
-      y: 205,
+      x: '45%',
+      y: 415,
       imgName: {
         1: {
           principal: vitamina_c,
@@ -61,8 +61,8 @@ const BodyComponent = () => {
     {
       id: 2,
       link: [2, 5],
-      x: 690,
-      y: 200,
+      x: '55%',
+      y: 415,
       imgName: {
         1: {
           principal: colageno,
@@ -74,8 +74,8 @@ const BodyComponent = () => {
     {
       id: 3,
       link: [1, 3],
-      x: 675,
-      y: 225,
+      x: '45%',
+      y: 385,
       imgName: {
         1: {
           principal: vitamina_c,
@@ -88,8 +88,8 @@ const BodyComponent = () => {
     {
       id: 4,
       link: [4],
-      x: 675,
-      y: 255,
+      x: '45%',
+      y: 360,
       imgName: {
         1: {
           principal: vitamina_c,
@@ -103,8 +103,8 @@ const BodyComponent = () => {
     {
       id: 5,
       link: [5, 2],
-      x: 630,
-      y: 260,
+      x: '25%',
+      y: 360,
       imgName: {
         1: {
           principal: colageno,
@@ -116,8 +116,8 @@ const BodyComponent = () => {
     {
       id: 6,
       link: [6],
-      x: 690,
-      y: 290,
+      x: '50%',
+      y: 325,
       imgName: {
         1: {
           principal: AjoUva,
@@ -129,8 +129,8 @@ const BodyComponent = () => {
     {
       id: 7,
       link: [7],
-      x: 690,
-      y: 320,
+      x: '55%',
+      y: 290,
       imgName: {
         1: {
           principal: GasPlus,
@@ -142,8 +142,8 @@ const BodyComponent = () => {
     {
       id: 8,
       link: [8, 15, 18],
-      x: 725,
-      y: 335,
+      x: '75%',
+      y: 285,
       imgName: {
         1: {
           principal: colageno,
@@ -159,8 +159,8 @@ const BodyComponent = () => {
     {
       id: 9,
       link: [7, 9, 15],
-      x: 690,
-      y: 360,
+      x: '55%',
+      y: 255,
       imgName: {
         1: {
           principal: FibraSlim,
@@ -172,8 +172,8 @@ const BodyComponent = () => {
     {
       id: 10,
       link: [10],
-      x: 675,
-      y: 390,
+      x: '45%',
+      y: 225,
       imgName: {
         1: {
           principal: Duoprox,
@@ -189,8 +189,8 @@ const BodyComponent = () => {
     {
       id: 11,
       link: [11],
-      x: 675,
-      y: 405,
+      x: '45%',
+      y: 210,
       imgName: {
         1: {
           principal: Duoprox,
@@ -202,8 +202,8 @@ const BodyComponent = () => {
     {
       id: 12,
       link: [12],
-      x: 675,
-      y: 420,
+      x: '45%',
+      y: 190,
       imgName: {
         1: {
           principal: Duoprox,
@@ -215,8 +215,8 @@ const BodyComponent = () => {
     {
       id: 13,
       link: [13],
-      x: 710,
-      y: 430,
+      x: '65%',
+      y: 180,
       imgName: {
         1: {
           principal: Reuduol,
@@ -236,8 +236,8 @@ const BodyComponent = () => {
     {
       id: 15,
       link: [8, 15, 18],
-      x: 650,
-      y: 480,
+      x: '30%',
+      y: 130,
       imgName: {
         1: {
           principal: colageno,
@@ -253,8 +253,8 @@ const BodyComponent = () => {
     {
       id: 16,
       link: [16, 17],
-      x: 635,
-      y: 510,
+      x: '25%',
+      y: 110,
       imgName: {
         1: {
           principal: Vitaday,
@@ -270,8 +270,8 @@ const BodyComponent = () => {
     {
       id: 17,
       link: [16, 17],
-      x: 655,
-      y: 520,
+      x: '35%',
+      y: 100,
       imgName: {
         1: {
           principal: Vitaday,
@@ -287,8 +287,8 @@ const BodyComponent = () => {
     {
       id: 18,
       link: [8, 15, 17],
-      x: 740,
-      y: 420,
+      x: '80%',
+      y: 190,
       imgName: {
         1: {
           principal: colageno,
@@ -375,30 +375,32 @@ const BodyComponent = () => {
           </Col>
 
           <Col md={4} className="d-flex flex-column align-items-center">
-            <img src={image} alt="Cuerpo humano" width={180} />
-            <div className="points-container">
-              {pointsData.map((point) => (
-                <div
-                  key={point.id}
-                  className={`point ${
-                    selectedPoint === point.id ? "selected" : ""
-                  }`}
-                  style={{
-                    top: point.y,
-                    left: point.x,
-                  }}
-                  onClick={() => handlePointClick(point.id)}
-                >
-                  {point.link.map((linkIndex) => (
-                    <a
-                      key={linkIndex}
-                      className={
-                        selectedPoint === point.id ? "selected-link" : ""
-                      }
-                    ></a>
-                  ))}
-                </div>
-              ))}
+            <div className="container-body">
+              <img src={image} alt="Cuerpo humano" width={180} className="" />
+              <div className="points-container">
+                {pointsData.map((point) => (
+                  <div
+                    key={point.id}
+                    className={`point ${
+                      selectedPoint === point.id ? "selected" : ""
+                    }`}
+                    style={{
+                      bottom: point.y,
+                      left: point.x,
+                    }}
+                    onClick={() => handlePointClick(point.id)}
+                  >
+                    {point.link.map((linkIndex) => (
+                      <a
+                        key={linkIndex}
+                        className={
+                          selectedPoint === point.id ? "selected-link" : ""
+                        }
+                      ></a>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
           </Col>
         </Row>
