@@ -78,10 +78,19 @@
   position: relative;
   width: 100%;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-body {
+    flex-direction: row;
   }
 }

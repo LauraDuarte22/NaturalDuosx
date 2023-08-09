@@ -6,7 +6,7 @@ const Product = (imageUrl) => {
   const handleMouseEnter = () => {
     setShowText(true);
   };
-  console.log(imageUrl)
+ 
 
   return (
     <div className="container-fluid position-relative">

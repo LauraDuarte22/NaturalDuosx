@@ -24,8 +24,6 @@ import huesos1 from "../assets/Productos/Beneficios/huesos1.png";
 import huesos2 from "../assets/Productos/Beneficios/huesos2.png";
 import manosycodos from "../assets/Productos/Beneficios/manosycodos.png";
 import manosycodos2 from "../assets/Productos/Beneficios/manosycodos2.png";
-import mano from "../assets/Productos/Beneficios/mano.png";
-import musculo from "../assets/Productos/Beneficios/musculo.png";
 import musculo2 from "../assets/Productos/Beneficios/musculo2.png";
 import adbomen from "../assets/Productos/Beneficios/adbomen.png";
 import Piel from "../assets/Productos/Beneficios/Piel.png";
@@ -41,13 +39,14 @@ import "./styles/Body.css";
 
 const BodyComponent = () => {
   const [selectedPoint, setSelectedPoint] = useState(null);
+  const [selectedLinkedPoints, setSelectedLinkedPoints] = useState([]); // Inicialización vacía
 
   const pointsData = [
     //Cerebro
     {
       id: 1,
       link: [1, 3],
-      x: '45%',
+      x: "45%",
       y: 415,
       imgName: {
         1: {
@@ -61,7 +60,7 @@ const BodyComponent = () => {
     {
       id: 2,
       link: [2, 5],
-      x: '55%',
+      x: "55%",
       y: 415,
       imgName: {
         1: {
@@ -74,7 +73,7 @@ const BodyComponent = () => {
     {
       id: 3,
       link: [1, 3],
-      x: '45%',
+      x: "45%",
       y: 385,
       imgName: {
         1: {
@@ -88,7 +87,7 @@ const BodyComponent = () => {
     {
       id: 4,
       link: [4],
-      x: '45%',
+      x: "45%",
       y: 360,
       imgName: {
         1: {
@@ -103,7 +102,7 @@ const BodyComponent = () => {
     {
       id: 5,
       link: [5, 2],
-      x: '25%',
+      x: "25%",
       y: 360,
       imgName: {
         1: {
@@ -116,7 +115,7 @@ const BodyComponent = () => {
     {
       id: 6,
       link: [6],
-      x: '50%',
+      x: "50%",
       y: 325,
       imgName: {
         1: {
@@ -129,7 +128,7 @@ const BodyComponent = () => {
     {
       id: 7,
       link: [7],
-      x: '55%',
+      x: "55%",
       y: 290,
       imgName: {
         1: {
@@ -142,7 +141,7 @@ const BodyComponent = () => {
     {
       id: 8,
       link: [8, 15, 18],
-      x: '75%',
+      x: "75%",
       y: 285,
       imgName: {
         1: {
@@ -159,7 +158,7 @@ const BodyComponent = () => {
     {
       id: 9,
       link: [7, 9, 15],
-      x: '55%',
+      x: "55%",
       y: 255,
       imgName: {
         1: {
@@ -172,7 +171,7 @@ const BodyComponent = () => {
     {
       id: 10,
       link: [10],
-      x: '45%',
+      x: "45%",
       y: 225,
       imgName: {
         1: {
@@ -189,7 +188,7 @@ const BodyComponent = () => {
     {
       id: 11,
       link: [11],
-      x: '45%',
+      x: "45%",
       y: 210,
       imgName: {
         1: {
@@ -202,7 +201,7 @@ const BodyComponent = () => {
     {
       id: 12,
       link: [12],
-      x: '45%',
+      x: "45%",
       y: 190,
       imgName: {
         1: {
@@ -215,7 +214,7 @@ const BodyComponent = () => {
     {
       id: 13,
       link: [13],
-      x: '65%',
+      x: "65%",
       y: 180,
       imgName: {
         1: {
@@ -236,7 +235,7 @@ const BodyComponent = () => {
     {
       id: 15,
       link: [8, 15, 18],
-      x: '30%',
+      x: "30%",
       y: 130,
       imgName: {
         1: {
@@ -253,7 +252,7 @@ const BodyComponent = () => {
     {
       id: 16,
       link: [16, 17],
-      x: '25%',
+      x: "25%",
       y: 110,
       imgName: {
         1: {
@@ -270,7 +269,7 @@ const BodyComponent = () => {
     {
       id: 17,
       link: [16, 17],
-      x: '35%',
+      x: "35%",
       y: 100,
       imgName: {
         1: {
@@ -287,7 +286,7 @@ const BodyComponent = () => {
     {
       id: 18,
       link: [8, 15, 17],
-      x: '80%',
+      x: "80%",
       y: 190,
       imgName: {
         1: {
@@ -301,10 +300,14 @@ const BodyComponent = () => {
       },
     },
   ];
-  const handlePointClick = (pointId) => {
+  const handlePointClick = (pointId, linkedPoints) => {
     setSelectedPoint((prevSelectedPoint) =>
       prevSelectedPoint === pointId ? null : pointId
     );
+  
+    if (linkedPoints) {
+      setSelectedLinkedPoints(linkedPoints);
+    }
   };
 
   const renderImages = (point) => {
@@ -312,10 +315,10 @@ const BodyComponent = () => {
       const leftImages = [];
       const rightImages = [];
       let count = 0;
-
+  
       Object.keys(point.imgName).forEach((key, index) => {
         const imageName = point.imgName[key];
-
+  
         const product = (
           <Product
             key={index}
@@ -324,7 +327,7 @@ const BodyComponent = () => {
             detalle={imageName.detalle}
           />
         );
-
+  
         if (index % 2 === 0) {
           leftImages.push(product);
         } else {
@@ -332,17 +335,17 @@ const BodyComponent = () => {
         }
         count++;
       });
-
-      // Paso 3: Agregar la clase CSS especial solo si es la tercera imagen
+  
       const containerClass =
         count !== 1
-          ? "product-container-left"
+          ? selectedLinkedPoints.includes(point.id)
+            ? "product-container-left linked"
+            : "product-container-left"
           : "product-container-left-unique";
-
+  
       return (
         <div>
           <div className={`${containerClass}`}>{leftImages}</div>
-
           <div className="product-container-right">{rightImages}</div>
         </div>
       );
@@ -351,30 +354,18 @@ const BodyComponent = () => {
   };
   return (
     <>
-      <Container
-        fluid
-        className="d-flex align-items-center justify-content-center mb-5-body"
-      >
+      <Container fluid className="d-flex align-items-center justify-content-center mb-5-body">
         <Row>
           <Col md={4} className="d-flex flex-wrap justify-content-center">
+       
             <div className="product-container">
               {pointsData.map((point) => (
-                <div key={point.id}>
-                  {point.link.map((linkIndex) => (
-                    <a
-                      key={linkIndex}
-                      className={
-                        selectedPoint === point.id ? "selected-link" : ""
-                      }
-                    ></a>
-                  ))}
-                  {renderImages(point)}
-                </div>
+                <div key={point.id}>{renderImages(point)}</div>
               ))}
             </div>
           </Col>
 
-          <Col md={4} className="d-flex flex-column align-items-center">
+          <Col md={8} className="d-flex justify-content-center align-items-center">
             <div className="container-body">
               <img src={image} alt="Cuerpo humano" width={180} className="" />
               <div className="points-container">
@@ -383,22 +374,16 @@ const BodyComponent = () => {
                     key={point.id}
                     className={`point ${
                       selectedPoint === point.id ? "selected" : ""
+                    } ${
+                      selectedLinkedPoints.includes(point.id) ? "linked" : ""
                     }`}
                     style={{
                       bottom: point.y,
                       left: point.x,
                     }}
-                    onClick={() => handlePointClick(point.id)}
-                  >
-                    {point.link.map((linkIndex) => (
-                      <a
-                        key={linkIndex}
-                        className={
-                          selectedPoint === point.id ? "selected-link" : ""
-                        }
-                      ></a>
-                    ))}
-                  </div>
+                    onClick={() => handlePointClick(point.id, point.link)}
+                  
+                  ></div>
                 ))}
               </div>
             </div>

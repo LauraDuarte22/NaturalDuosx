@@ -4,7 +4,6 @@ import { Container, Col, Row } from "react-bootstrap";
 import "./styles/Product.css";
 
 const Product = ({ index, imageName, detalle }) => {
-  console.log(detalle);
   const productData = {
     Colageno: {
       name: "Colageno",
@@ -83,7 +82,6 @@ const Product = ({ index, imageName, detalle }) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-  console.log(index, imageName);
 
   return (
     <div className="parent-container">
@@ -105,7 +103,9 @@ const Product = ({ index, imageName, detalle }) => {
                   </div>
                   <Row className="contenedor-detalle">
                     {detalle.map((detalleImage, idx) => (
-                      <Col key={idx}>
+                      <Col key={idx} xs="6" md="4">
+                        {" "}
+                        {/* Adjust columns based on your design */}
                         <img
                           src={detalleImage}
                           alt={`Detalle ${name} - ${idx}`}
