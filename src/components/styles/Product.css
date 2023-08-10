@@ -14,7 +14,7 @@
   width: 170px;
   z-index: 2;
   left: 70%;
-  bottom: 115px;
+  bottom: 125px;
 }
 
 .margin-special {
@@ -75,10 +75,7 @@
   .selected-image-container {
     width: 40%;
   }
-  .selected-image {
-    bottom: 20px;
-    bottom: 20px;
-  }
+ 
 
 
 }
