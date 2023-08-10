@@ -325,7 +325,6 @@ const BodyComponent = () => {
             index={imageAndId.id}
             imageName={imageName}
             detalle={detalleImages}
-           
           />
         );
         products.push(product);
@@ -339,8 +338,8 @@ const BodyComponent = () => {
       fluid
       className="d-flex align-items-center justify-content-center mb-5-body"
     >
-      <section className="d-flex justify-content-center align-items-center">
-      <div className="image-container-right d-flex flex-row flex-wrap justify-content-center justify-content-md-end">
+      <section className="d-flex flex-column flex-md-row justify-content-center align-items-center">
+        <div className="products-container image-container-right">
           {Object.keys(selectedPointInfo).map((pointId) => {
             if (parseInt(pointId) % 2 === 0) {
               const point = selectedPointInfo[pointId];
@@ -382,8 +381,7 @@ const BodyComponent = () => {
             ))}
           </div>
         </div>
-        <div className="image-container-left d-flex flex-row flex-wrap justify-content-center justify-content-md-start">
-
+        <div className="products-container image-container-left">
           {Object.keys(selectedPointInfo).map((pointId) => {
             if (parseInt(pointId) % 2 !== 0) {
               const point = selectedPointInfo[pointId];
@@ -406,6 +404,5 @@ const BodyComponent = () => {
     </Container>
   );
 };
-
 
 export default BodyComponent;
