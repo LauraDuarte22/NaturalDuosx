@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import image from "../assets/Body.png";
 import colageno from "../assets/Productos/Colageno.png";
@@ -39,6 +39,8 @@ import "./styles/Body.css";
 
 const BodyComponent = () => {
   const [selectedPoint, setSelectedPoint] = useState(null);
+  const [selectedPointInfo, setSelectedPointInfo] = useState({});
+
   const [selectedLinkedPoints, setSelectedLinkedPoints] = useState([]);
 
   const pointsData = [
@@ -49,11 +51,11 @@ const BodyComponent = () => {
       x: "45%",
       y: 415,
       imgName: {
-        1: {
+        0: {
           principal: vitamina_c,
           detalle: [Frenteycuello, Pulmones, Garganta],
         },
-        2: { principal: VitadaySure, detalle: [VitadayBe] },
+        1: { principal: VitadaySure, detalle: [VitadayBe] },
       },
     },
     //Al lado del cerebro
@@ -63,7 +65,7 @@ const BodyComponent = () => {
       x: "55%",
       y: 415,
       imgName: {
-        1: {
+        0: {
           principal: colageno,
           detalle: [cabello, Piel],
         },
@@ -76,11 +78,11 @@ const BodyComponent = () => {
       x: "45%",
       y: 385,
       imgName: {
-        1: {
+        0: {
           principal: vitamina_c,
           detalle: [cabello, Piel],
         },
-        2: { principal: VitadaySure, detalle: [VitadayBe] },
+        1: { principal: VitadaySure, detalle: [VitadayBe] },
       },
     },
     //Garganta
@@ -90,12 +92,12 @@ const BodyComponent = () => {
       x: "45%",
       y: 360,
       imgName: {
-        1: {
+        0: {
           principal: vitamina_c,
           detalle: [Frenteycuello, Pulmones, Garganta],
         },
-        2: { principal: Euximil, detalle: [garganta1] },
-        3: { principal: Euximil2, detalle: [Tos] },
+        1: { principal: Euximil, detalle: [garganta1] },
+        2: { principal: Euximil2, detalle: [Tos] },
       },
     },
     //Hombro
@@ -105,7 +107,7 @@ const BodyComponent = () => {
       x: "25%",
       y: 360,
       imgName: {
-        1: {
+        0: {
           principal: colageno,
           detalle: [cabello, Piel],
         },
@@ -118,7 +120,7 @@ const BodyComponent = () => {
       x: "50%",
       y: 325,
       imgName: {
-        1: {
+        0: {
           principal: AjoUva,
           detalle: [cabello, Piel],
         },
@@ -131,7 +133,7 @@ const BodyComponent = () => {
       x: "55%",
       y: 290,
       imgName: {
-        1: {
+        0: {
           principal: GasPlus,
           detalle: [Estomagoinstestinos],
         },
@@ -144,11 +146,11 @@ const BodyComponent = () => {
       x: "75%",
       y: 285,
       imgName: {
-        1: {
+        0: {
           principal: colageno,
           detalle: [manosycodos],
         },
-        2: {
+        1: {
           principal: Reuduol,
           detalle: [manosycodos2],
         },
@@ -161,7 +163,7 @@ const BodyComponent = () => {
       x: "55%",
       y: 255,
       imgName: {
-        1: {
+        0: {
           principal: FibraSlim,
           detalle: [Estomagoinstestinos],
         },
@@ -174,11 +176,11 @@ const BodyComponent = () => {
       x: "45%",
       y: 225,
       imgName: {
-        1: {
+        0: {
           principal: Duoprox,
           detalle: [Vejiga],
         },
-        2: {
+        1: {
           principal: Uronex,
           detalle: [Vejiga],
         },
@@ -191,7 +193,7 @@ const BodyComponent = () => {
       x: "45%",
       y: 210,
       imgName: {
-        1: {
+        0: {
           principal: Duoprox,
           detalle: [Prostata],
         },
@@ -204,7 +206,7 @@ const BodyComponent = () => {
       x: "45%",
       y: 190,
       imgName: {
-        1: {
+        0: {
           principal: Duoprox,
           detalle: [Sexo],
         },
@@ -217,11 +219,11 @@ const BodyComponent = () => {
       x: "65%",
       y: 180,
       imgName: {
-        1: {
+        0: {
           principal: Reuduol,
           detalle: [huesos1],
         },
-        2: {
+        1: {
           principal: vitamina_d,
           detalle: [VitadayBe],
         },
@@ -238,11 +240,11 @@ const BodyComponent = () => {
       x: "30%",
       y: 130,
       imgName: {
-        1: {
+        0: {
           principal: colageno,
           detalle: [manosycodos],
         },
-        2: {
+        1: {
           principal: Reuduol,
           detalle: [manosycodos2],
         },
@@ -255,11 +257,11 @@ const BodyComponent = () => {
       x: "25%",
       y: 110,
       imgName: {
-        1: {
+        0: {
           principal: Vitaday,
           detalle: [musculo2],
         },
-        2: {
+        1: {
           principal: Reuduol,
           detalle: [adbomen],
         },
@@ -272,11 +274,11 @@ const BodyComponent = () => {
       x: "35%",
       y: 100,
       imgName: {
-        1: {
+        0: {
           principal: Vitaday,
           detalle: [musculo2],
         },
-        2: {
+        1: {
           principal: Reuduol,
           detalle: [adbomen],
         },
@@ -289,67 +291,46 @@ const BodyComponent = () => {
       x: "80%",
       y: 190,
       imgName: {
-        1: {
+        0: {
           principal: colageno,
           detalle: [manosycodos],
         },
-        2: {
+        1: {
           principal: Reuduol,
           detalle: [manosycodos2],
         },
       },
     },
   ];
-  const handlePointClick = (pointId, linkedPoints) => {
+  const handlePointClick = (pointId, linkedPoints, pointImage) => {
     if (selectedPoint === pointId || selectedLinkedPoints.includes(pointId)) {
       setSelectedPoint(null);
       setSelectedLinkedPoints([]);
+      setSelectedPointInfo({});
     } else {
       setSelectedPoint(pointId);
       setSelectedLinkedPoints(linkedPoints);
+      setSelectedPointInfo(pointImage);
     }
   };
-
-
-
-  const renderImages = (point) => {
-    if (selectedPoint === point.id) {
-      const leftImages = [];
-      const rightImages = [];
-      let count = 0;
-
-      Object.keys(point.imgName).forEach((key, index) => {
-        const imageName = point.imgName[key];
-
+  const renderImages = (imagesAndIds) => {
+    if (imagesAndIds.length > 0) {
+      const products = [];
+      imagesAndIds.forEach((imageAndId, index) => {
+        const imageName = imageAndId.images.principal;
+        const detalleImages = imageAndId.images.detalle;
         const product = (
           <Product
-            key={index}
-            index={index}
-            imageName={imageName.principal}
-            detalle={imageName.detalle}
+            key={imageAndId.id}
+            index={imageAndId.id}
+            imageName={imageName}
+            detalle={detalleImages}
+           
           />
         );
-
-        if (index % 2 === 0) {
-          leftImages.push(product);
-        } else {
-          rightImages.push(product);
-        }
-        count++;
+        products.push(product);
       });
-
-      const containerClass =
-        count !== 1
-          ? selectedLinkedPoints.includes(point.id)
-            ? "product-container-left"
-            : "product-container-left"
-          : "";
-      return (
-        <div className={`product-container ${containerClass}`}>
-          {leftImages}
-          {rightImages}
-        </div>
-      );
+      return <div className="">{products}</div>;
     }
     return null;
   };
@@ -360,13 +341,30 @@ const BodyComponent = () => {
         className="d-flex align-items-center justify-content-center mb-5-body"
       >
         <section className="d-flex justify-content-center align-items-center">
-          <section>
-            <div>
-              {pointsData.map((point) => (
-                <div key={point.id}>{renderImages(point)}</div>
-              ))}
-            </div>
-          </section>
+          <div className="image-container-right">
+            {Object.keys(selectedPointInfo).map((pointId) => {
+              if (parseInt(pointId) % 2 === 0) {
+                const point = selectedPointInfo[pointId];
+
+                if (point && point.principal && point.detalle) {
+                  return (
+                    <div key={pointId}>
+                      {renderImages([
+                        {
+                          id: pointId,
+                          images: {
+                            principal: point.principal,
+                            detalle: point.detalle,
+                          },
+                        },
+                      ])}
+                    </div>
+                  );
+                }
+              }
+              return null;
+            })}
+          </div>
           <div className="container-body">
             <img src={image} alt="Cuerpo humano" width={180} className="" />
             <div className="points-container">
@@ -383,10 +381,36 @@ const BodyComponent = () => {
                     bottom: point.y,
                     left: point.x,
                   }}
-                  onClick={() => handlePointClick(point.id, point.link)}
+                  onClick={() =>
+                    handlePointClick(point.id, point.link, point.imgName)
+                  }
                 ></div>
               ))}
             </div>
+          </div>
+          <div className="image-container-left">
+            {Object.keys(selectedPointInfo).map((pointId) => {
+              if (parseInt(pointId) % 2 !== 0) {
+                const point = selectedPointInfo[pointId];
+
+                if (point && point.principal && point.detalle) {
+                  return (
+                    <div key={pointId}>
+                      {renderImages([
+                        {
+                          id: pointId,
+                          images: {
+                            principal: point.principal,
+                            detalle: point.detalle,
+                          },
+                        },
+                      ])}
+                    </div>
+                  );
+                }
+              }
+              return null;
+            })}
           </div>
         </section>
       </Container>

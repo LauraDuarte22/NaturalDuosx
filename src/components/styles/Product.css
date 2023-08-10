@@ -1,11 +1,4 @@
-.product-container {
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-}
-.parent-container{
-  margin-right: 80%!important;
-}
+
 
 .selected-image-container {
   position: relative;
@@ -18,18 +11,22 @@
   width: 100%;
 }
 
-.selected-image-inside-background {
- left: 70%;
-  z-index: 2;
-}
 .selected-image {
   position: relative;
   width: 170px;
   z-index: 2;
-  margin: 0 auto;
-  bottom: 120px;
+  left: 70%;
+  bottom: 115px;
 }
 
+.margin-special{
+  position: relative;
+  width: 170px;
+  z-index: 2;
+  left: 70%;
+  bottom: 100px;
+
+}
 .hover-text {
   display: none;
   color: #fff;

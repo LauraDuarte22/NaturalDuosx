@@ -4,6 +4,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import "./styles/Product.css";
 
 const Product = ({ index, imageName, detalle }) => {
+
   const productData = {
     Colageno: {
       name: "Colageno",
@@ -87,15 +88,11 @@ const Product = ({ index, imageName, detalle }) => {
     <Container
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="parent-container"
+      className="mt-5"
     >
       <Row className="justify-content-center">
         <Col xs="12" md="6">
-          <div
-            className={`selected-image-container d-flex align-items-center ${
-              index === 2 ? "special-css-class" : ""
-            }`}
-          >
+          <div className="d-flex align-items-center selected-image-container">
             {" "}
             {isHovered && (
               <div className="background-svg ">
@@ -114,10 +111,11 @@ const Product = ({ index, imageName, detalle }) => {
               </div>
             )}
             <img
-              className="selected-image selected-image-inside-background text-center mb-5 ml-5 my-2"
+              className={`mb-5 ml-5 my-2  selected-image
+              ${index == 2  ? "margin-special" :""}`}
               key={index}
               src={imageName}
-              alt={`Producto ${name}`}
+              alt={`Producto ${index}`}
             />
           </div>
         </Col>
