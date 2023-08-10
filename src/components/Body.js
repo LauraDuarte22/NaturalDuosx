@@ -334,12 +334,9 @@ const BodyComponent = () => {
     return null;
   };
   return (
-    <Container
-      fluid
-      className="d-flex align-items-center justify-content-center mb-5-body"
-    >
-      <section className="d-flex flex-column flex-md-row justify-content-center align-items-center">
-        <div className="products-container image-container-right">
+    <Container fluid className="d-flex align-items-center justify-content-center mb-5-body">
+    <section className="d-flex flex-column flex-md-row justify-content-center align-items-center ">
+        <div className="products-container image-container-right ">
           {Object.keys(selectedPointInfo).map((pointId) => {
             if (parseInt(pointId) % 2 === 0) {
               const point = selectedPointInfo[pointId];
@@ -381,7 +378,7 @@ const BodyComponent = () => {
             ))}
           </div>
         </div>
-        <div className="products-container image-container-left">
+        <div className="products-container image-container-left ">
           {Object.keys(selectedPointInfo).map((pointId) => {
             if (parseInt(pointId) % 2 !== 0) {
               const point = selectedPointInfo[pointId];

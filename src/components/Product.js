@@ -85,7 +85,7 @@ const Product = ({ index, imageName, detalle }) => {
   };
 
   return (
-    <Container
+    <Container fluid
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className="mt-5"
@@ -93,7 +93,7 @@ const Product = ({ index, imageName, detalle }) => {
       <Row className="justify-content-center">
         <Col xs="12" md="6">
           <div className="d-flex align-items-center selected-image-container">
-            {" "}
+           
             {isHovered && (
               <div className="background-svg ">
                 <div className="margin-text text-white">

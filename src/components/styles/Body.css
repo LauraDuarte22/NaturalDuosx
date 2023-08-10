@@ -70,5 +70,12 @@
   .mb-5-body {
     margin-bottom: 10rem !important;
   }
+  .image-container-left,
+.image-container-right {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+}
  
 }
