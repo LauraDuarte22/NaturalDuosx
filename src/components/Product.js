@@ -84,49 +84,45 @@ const Product = ({ index, imageName, detalle }) => {
   };
 
   return (
-    <div className="parent-container">
-      <Container
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <Row className="justify-content-center">
-          <Col xs="12" md="6">
-            <div
-              className={`selected-image-container d-flex align-items-center ${
-                index === 2 ? "special-css-class" : ""
-              }`}
-            >
-              {isHovered && (
-                <div className="background-svg">
-                  <div className="margin-text text-white">
-                    <span className="fw-bold">{title}</span> {text}
-                  </div>
-                  <Row className="contenedor-detalle">
-                    {detalle.map((detalleImage, idx) => (
-                     <Col xs="12" md="6" lg="4">
-                        {" "}
-                        {/* Adjust columns based on your design */}
-                        <img
-                          src={detalleImage}
-                          alt={`Detalle ${name} - ${idx}`}
-                          className="detalle-image"
-                        />
-                      </Col>
-                    ))}
-                  </Row>
+    <Container
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="parent-container"
+    >
+      <Row className="justify-content-center">
+        <Col xs="12" md="6">
+          <div
+            className={`selected-image-container d-flex align-items-center ${
+              index === 2 ? "special-css-class" : ""
+            }`}
+          >
+            {" "}
+            {isHovered && (
+              <div className="background-svg ">
+                <div className="margin-text text-white">
+                  <span className="fw-bold">{title}</span> {text}
                 </div>
-              )}
-              <img
-                className="selected-image image-fluid text-center mb-5"
-                key={index}
-                src={imageName}
-                alt={`Producto ${name}`}
-              />
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+                <div className="contenedor-detalle">
+                  {detalle.map((detalleImage, idx) => (
+                    <img
+                      src={detalleImage}
+                      alt={`Detalle ${name} - ${idx}`}
+                      className="detalle-image img-fluid  mx-2 mt-3"
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+            <img
+              className="selected-image selected-image-inside-background text-center mb-5 ml-5 my-2"
+              key={index}
+              src={imageName}
+              alt={`Producto ${name}`}
+            />
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

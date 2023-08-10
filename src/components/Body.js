@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Container, Col, Row } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
 import image from "../assets/Body.png";
 import colageno from "../assets/Productos/Colageno.png";
 import vitamina_c from "../assets/Productos/VitaminaC.png";
@@ -39,7 +39,7 @@ import "./styles/Body.css";
 
 const BodyComponent = () => {
   const [selectedPoint, setSelectedPoint] = useState(null);
-  const [selectedLinkedPoints, setSelectedLinkedPoints] = useState([]); // Inicialización vacía
+  const [selectedLinkedPoints, setSelectedLinkedPoints] = useState([]);
 
   const pointsData = [
     //Cerebro
@@ -301,24 +301,26 @@ const BodyComponent = () => {
     },
   ];
   const handlePointClick = (pointId, linkedPoints) => {
-    setSelectedPoint((prevSelectedPoint) =>
-      prevSelectedPoint === pointId ? null : pointId
-    );
-  
-    if (linkedPoints) {
+    if (selectedPoint === pointId || selectedLinkedPoints.includes(pointId)) {
+      setSelectedPoint(null);
+      setSelectedLinkedPoints([]);
+    } else {
+      setSelectedPoint(pointId);
       setSelectedLinkedPoints(linkedPoints);
     }
   };
+
+
 
   const renderImages = (point) => {
     if (selectedPoint === point.id) {
       const leftImages = [];
       const rightImages = [];
       let count = 0;
-  
+
       Object.keys(point.imgName).forEach((key, index) => {
         const imageName = point.imgName[key];
-  
+
         const product = (
           <Product
             key={index}
@@ -327,7 +329,7 @@ const BodyComponent = () => {
             detalle={imageName.detalle}
           />
         );
-  
+
         if (index % 2 === 0) {
           leftImages.push(product);
         } else {
@@ -335,18 +337,17 @@ const BodyComponent = () => {
         }
         count++;
       });
-  
+
       const containerClass =
         count !== 1
           ? selectedLinkedPoints.includes(point.id)
             ? "product-container-left"
             : "product-container-left"
-          : "product-container-left-unique";
-  
+          : "";
       return (
-        <div>
-          <div className={`${containerClass}`}>{leftImages}</div>
-          <div className="product-container-right">{rightImages}</div>
+        <div className={`product-container ${containerClass}`}>
+          {leftImages}
+          {rightImages}
         </div>
       );
     }
@@ -354,41 +355,40 @@ const BodyComponent = () => {
   };
   return (
     <>
-      <Container fluid className="d-flex align-items-center justify-content-center mb-5-body">
-        <Row>
-          <Col md={4} className="d-flex flex-wrap justify-content-center">
-       
-            <div className="product-container">
+      <Container
+        fluid
+        className="d-flex align-items-center justify-content-center mb-5-body"
+      >
+        <section className="d-flex justify-content-center align-items-center">
+          <section>
+            <div>
               {pointsData.map((point) => (
                 <div key={point.id}>{renderImages(point)}</div>
               ))}
             </div>
-          </Col>
-
-          <Col md={8} className="d-flex justify-content-center align-items-center">
-            <div className="container-body">
-              <img src={image} alt="Cuerpo humano" width={180} className="" />
-              <div className="points-container">
-                {pointsData.map((point) => (
-                  <div
-                    key={point.id}
-                    className={`point ${
-                      selectedPoint === point.id ? "selected" : ""
-                    } ${
-                      selectedLinkedPoints.includes(point.id) ? "selected" : ""
-                    }`}
-                    style={{
-                      bottom: point.y,
-                      left: point.x,
-                    }}
-                    onClick={() => handlePointClick(point.id, point.link)}
-                  
-                  ></div>
-                ))}
-              </div>
+          </section>
+          <div className="container-body">
+            <img src={image} alt="Cuerpo humano" width={180} className="" />
+            <div className="points-container">
+              {pointsData.map((point) => (
+                <div
+                  key={point.id}
+                  className={`point ${
+                    selectedPoint === point.id ||
+                    selectedLinkedPoints.includes(point.id)
+                      ? "selected"
+                      : ""
+                  }`}
+                  style={{
+                    bottom: point.y,
+                    left: point.x,
+                  }}
+                  onClick={() => handlePointClick(point.id, point.link)}
+                ></div>
+              ))}
             </div>
-          </Col>
-        </Row>
+          </div>
+        </section>
       </Container>
     </>
   );
