@@ -339,9 +339,12 @@ const BodyComponent = () => {
       <Container
         fluid
         className="d-flex align-items-center justify-content-center mb-5-body"
+
       >
-        <section className="d-flex justify-content-center align-items-center">
-          <div className="image-container-right">
+             <section className="d-flex justify-content-center align-items-center">
+
+             <div className="image-container-right d-flex flex-row flex-wrap justify-content-end">
+
             {Object.keys(selectedPointInfo).map((pointId) => {
               if (parseInt(pointId) % 2 === 0) {
                 const point = selectedPointInfo[pointId];
@@ -388,7 +391,7 @@ const BodyComponent = () => {
               ))}
             </div>
           </div>
-          <div className="image-container-left">
+          <div className="image-container-left d-flex flex-row flex-wrap">
             {Object.keys(selectedPointInfo).map((pointId) => {
               if (parseInt(pointId) % 2 !== 0) {
                 const point = selectedPointInfo[pointId];
