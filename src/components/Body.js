@@ -321,7 +321,7 @@ const BodyComponent = () => {
         const detalleImages = imageAndId.images.detalle;
         const product = (
           <Product
-            key={imageAndId.id}
+          key={`product-${imageAndId.id}-${index}`}
             index={imageAndId.id}
             imageName={imageName}
             detalle={detalleImages}

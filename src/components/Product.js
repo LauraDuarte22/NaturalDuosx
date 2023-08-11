@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Col, Row } from "react-bootstrap";
 
 import "./styles/Product.css";
 
 const Product = ({ index, imageName, detalle }) => {
-
   const productData = {
     Colageno: {
       name: "Colageno",
@@ -73,6 +72,8 @@ const Product = ({ index, imageName, detalle }) => {
     },
   };
   const [isHovered, setIsHovered] = useState(false);
+  const [isTouched, setIsTouched] = useState(false);
+
   const name = Object.keys(productData)[index];
   const { title, text } = productData[name];
 
@@ -83,17 +84,36 @@ const Product = ({ index, imageName, detalle }) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
+  const handlePointerEnter = () => {
+    setIsHovered(true);
+  };
 
+  const handlePointerLeave = () => {
+    setIsHovered(false);
+  };
+  useEffect(() => {
+    const onTouchStart = () => {
+      setIsTouched(true);
+    };
+    window.addEventListener("touchstart", onTouchStart);
+    return () => {
+      window.removeEventListener("touchstart", onTouchStart);
+    };
+  }, []);
   return (
-    <Container fluid
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+    <Container
+      fluid
+      onMouseEnter={handlePointerEnter}
+      onMouseLeave={handlePointerLeave}
+      onTouchStart={() => {
+        setIsTouched(true);
+        handlePointerEnter();
+      }}
       className="mt-5"
     >
       <Row className="justify-content-center">
         <Col xs="12" md="6">
           <div className="d-flex align-items-center selected-image-container">
-           
             {isHovered && (
               <div className="background-svg ">
                 <div className="margin-text text-white">
@@ -112,7 +132,7 @@ const Product = ({ index, imageName, detalle }) => {
             )}
             <img
               className={`mb-5 ml-5 my-2  selected-image
-              ${index == 2  ? "margin-special" :""}`}
+              ${index == 2 ? "margin-special" : ""}`}
               key={index}
               src={imageName}
               alt={`Producto ${index}`}
