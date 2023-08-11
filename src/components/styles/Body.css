@@ -108,15 +108,30 @@
 @media (max-width: 420px) {
   .image-container-right,
   .image-container-left {
-    position: absolute;
     margin-left: 55%;
-    padding-left: 0px !important;
+    margin-top: 10%;
+    padding-top: 10px !important;
+    padding-right: 1px !important;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 395px) {
   .image-container-right,
   .image-container-left {
-    margin: 5%;
-    padding: 10px !important;
+    margin-right:43%;
+    padding-top: 10px !important;
+    padding-right: 1px !important;
   }
 }
+@media (max-width: 280px) {
+  .image-container-right,
+  .image-container-left {
+    margin-right:0%;
+    padding-top: 10px !important;
+    padding-right: 1px !important;
+  }
+  .background-svg {
+    background: linear-gradient(180deg, #003ADE 0%, rgba(1, 44, 166, 0.80) 100%);
+
+  }
+}
+
