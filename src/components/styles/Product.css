@@ -81,18 +81,12 @@
     left: 60%;
     
   }
-  .image-container-right {
-    align-items: center;
-    margin-right: 0%;
-  }
+
 }
 @media (max-width:500px){
   .selected-image {
     left: 60%;
     
   }
-  .image-container-right {
-    align-items: center;
-    margin-right: -3%!important;
-  }
+
 }
