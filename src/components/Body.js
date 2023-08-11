@@ -335,7 +335,7 @@ const BodyComponent = () => {
   };
   return (
     <Container fluid className="d-flex align-items-center justify-content-center mb-5-body">
-    <section className="d-flex flex-column flex-md-row justify-content-center align-items-center ">
+    <section className="principal-container d-flex flex-column flex-md-row justify-content-center align-items-center ">
         <div className="image-container-right ">
           {Object.keys(selectedPointInfo).map((pointId) => {
             if (parseInt(pointId) % 2 === 0) {
@@ -356,7 +356,7 @@ const BodyComponent = () => {
           })}
         </div>
 
-        <div className="container-body">
+        <div className="container-body container-body-min">
           <img src={image} alt="Cuerpo humano" width={180} className="" />
           <div className="points-container">
             {pointsData.map((point) => (
