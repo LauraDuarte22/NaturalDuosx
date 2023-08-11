@@ -329,14 +329,14 @@ const BodyComponent = () => {
         );
         products.push(product);
       });
-      return <div className="">{products}</div>;
+      return <div className="products-container">{products}</div>;
     }
     return null;
   };
   return (
     <Container fluid className="d-flex align-items-center justify-content-center mb-5-body">
     <section className="d-flex flex-column flex-md-row justify-content-center align-items-center ">
-        <div className="products-container image-container-right ">
+        <div className="image-container-right ">
           {Object.keys(selectedPointInfo).map((pointId) => {
             if (parseInt(pointId) % 2 === 0) {
               const point = selectedPointInfo[pointId];
@@ -355,6 +355,7 @@ const BodyComponent = () => {
             return null;
           })}
         </div>
+
         <div className="container-body">
           <img src={image} alt="Cuerpo humano" width={180} className="" />
           <div className="points-container">
@@ -378,7 +379,8 @@ const BodyComponent = () => {
             ))}
           </div>
         </div>
-        <div className="products-container image-container-left ">
+
+        <div className=" image-container-left ">
           {Object.keys(selectedPointInfo).map((pointId) => {
             if (parseInt(pointId) % 2 !== 0) {
               const point = selectedPointInfo[pointId];
@@ -397,6 +399,7 @@ const BodyComponent = () => {
             return null;
           })}
         </div>
+        
       </section>
     </Container>
   );

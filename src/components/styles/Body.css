@@ -48,8 +48,8 @@
 }
 .image-container-left,
 .image-container-right {
-  position: relative;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
 }
@@ -70,12 +70,12 @@
   .mb-5-body {
     margin-bottom: 10rem !important;
   }
-  .image-container-left,
-.image-container-right {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: left;
 }
- 
+@media (min-width: 700px) {
+  .products-container{
+    display: flex!important;
+    justify-content: flex-start!important;
+    align-items: center!important;
+    height: 100vh!important;
+  }
 }
