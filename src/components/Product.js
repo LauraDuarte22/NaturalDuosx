@@ -4,6 +4,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import "./styles/Product.css";
 
 const Product = ({ index, imageName, detalle }) => {
+  console.log(imageName);
   const productData = {
     Colageno: {
       name: "Colageno",
@@ -74,9 +75,12 @@ const Product = ({ index, imageName, detalle }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isTouched, setIsTouched] = useState(false);
 
-  const name = Object.keys(productData)[index];
-  const { title, text } = productData[name];
+  const name = imageName.replace("/static/media/", "");
+  const fullName = name.split(".")[0];
 
+  const { title, text } = productData[fullName];
+
+  ///static/media/Euximil.da29b5d227da8b79a1f9.png
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
