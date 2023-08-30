@@ -4,7 +4,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import "./styles/Product.css";
 
 const Product = ({ index, imageName, detalle }) => {
-  console.log(imageName);
+  
   const productData = {
     Colageno: {
       name: "Colageno",
@@ -68,8 +68,8 @@ const Product = ({ index, imageName, detalle }) => {
     },
     Vitaday: {
       name: "Vitaday",
-      title: "Multivitamínico ",
-      text: "esencial para el desarrollo y crecimiento de los niños. Contiene todas las vitaminas y minerales que el cuerpo necesita para el desarrollo de dientes y huesos sanos y fuertes.",
+      title: "Alimento Multivitamínico ",
+      text: " con complejo B, calostro bovino, omega 3, proteínas, vitaminas y minerales. Mantiene y recupera la fuerza y masa muscular del cuerpo.",
     },
   };
   const [isHovered, setIsHovered] = useState(false);

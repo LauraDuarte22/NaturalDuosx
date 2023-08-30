@@ -227,7 +227,7 @@ const BodyComponent = () => {
           principal: vitamina_d,
           detalle: [VitadayBe],
         },
-        3: {
+        2: {
           principal: colageno,
           detalle: [huesos2],
         },
@@ -333,6 +333,7 @@ const BodyComponent = () => {
     }
     return null;
   };
+  console.log(selectedPointInfo)
   return (
     <Container fluid className="d-flex align-items-center justify-content-center mb-5-body">
     <section className="principal-container d-flex flex-column flex-md-row justify-content-center align-items-center ">
