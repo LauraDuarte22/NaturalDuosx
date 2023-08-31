@@ -2,17 +2,26 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import image from "../assets/Body.png";
 import colageno from "../assets/Productos/Colageno.png";
+import colageno2 from "../assets/Productos/Colageno2.png";
+
 import vitamina_c from "../assets/Productos/VitaminaC.png";
-import vitamina_d from "../assets/Productos/VitadaySure.png";
 import VitadaySure from "../assets/Productos/VitadaySure.png";
+import VitadaySure2 from "../assets/Productos/VitadaySure2.png";
 import Euximil from "../assets/Productos/Euximil.png";
 import Euximil2 from "../assets/Productos/Euximil2.png";
 import AjoUva from "../assets/Productos/AjoUva.png";
 import GasPlus from "../assets/Productos/GasPlus.png";
 import FibraSlim from "../assets/Productos/FibraSlim.png";
+import FibraSlim2 from "../assets/Productos/FibraSlim2.png";
 import Duoprox from "../assets/Productos/Duoprox.png";
+import Duoprox2 from "../assets/Productos/Duoprox2.png";
+
 import Uronex from "../assets/Productos/Uronex.png";
 import Reuduol from "../assets/Productos/Reuduol.png";
+import Reuduol2 from "../assets/Productos/Reuduol2.png";
+import Reuduol3 from "../assets/Productos/Reuduol3.png";
+
+
 import Vitaday from "../assets/Productos/Vitaday.png";
 
 import cabello from "../assets/Productos/Beneficios/Cabello.png";
@@ -22,6 +31,7 @@ import Garganta from "../assets/Productos/Beneficios/Garganta.png";
 import garganta1 from "../assets/Productos/Beneficios/garganta1.png";
 import huesos1 from "../assets/Productos/Beneficios/huesos1.png";
 import huesos2 from "../assets/Productos/Beneficios/huesos2.png";
+import mano from "../assets/Productos/Beneficios/mano.png"
 import manosycodos from "../assets/Productos/Beneficios/manosycodos.png";
 import manosycodos2 from "../assets/Productos/Beneficios/manosycodos2.png";
 import musculo2 from "../assets/Productos/Beneficios/musculo2.png";
@@ -33,6 +43,7 @@ import Sexo from "../assets/Productos/Beneficios/Sexo.png";
 import Tos from "../assets/Productos/Beneficios/Tos.png";
 import Vejiga from "../assets/Productos/Beneficios/Vejiga.png";
 import VitadayBe from "../assets/Productos/Beneficios/Vitaday.png";
+import corazon from "../assets/Productos/Beneficios/Corazon.png"
 
 import Product from "./Product";
 import "./styles/Body.css";
@@ -122,7 +133,7 @@ const BodyComponent = () => {
       imgName: {
         0: {
           principal: AjoUva,
-          detalle: [cabello, Piel],
+          detalle: [corazon],
         },
       },
     },
@@ -147,7 +158,7 @@ const BodyComponent = () => {
       y: 285,
       imgName: {
         0: {
-          principal: colageno,
+          principal: colageno2,
           detalle: [manosycodos],
         },
         1: {
@@ -207,7 +218,7 @@ const BodyComponent = () => {
       y: 190,
       imgName: {
         0: {
-          principal: Duoprox,
+          principal: Duoprox2,
           detalle: [Sexo],
         },
       },
@@ -220,11 +231,11 @@ const BodyComponent = () => {
       y: 180,
       imgName: {
         0: {
-          principal: Reuduol,
+          principal: Reuduol2,
           detalle: [huesos1],
         },
         1: {
-          principal: vitamina_d,
+          principal: VitadaySure2,
           detalle: [VitadayBe],
         },
         2: {
@@ -241,7 +252,7 @@ const BodyComponent = () => {
       y: 130,
       imgName: {
         0: {
-          principal: colageno,
+          principal: colageno2,
           detalle: [manosycodos],
         },
         1: {
@@ -262,7 +273,7 @@ const BodyComponent = () => {
           detalle: [musculo2],
         },
         1: {
-          principal: Reuduol,
+          principal: Reuduol3,
           detalle: [adbomen],
         },
       },
@@ -275,11 +286,11 @@ const BodyComponent = () => {
       y: 100,
       imgName: {
         0: {
-          principal: Vitaday,
-          detalle: [musculo2],
+          principal: colageno,
+          detalle: [mano],
         },
         1: {
-          principal: Reuduol,
+          principal: FibraSlim2,
           detalle: [adbomen],
         },
       },
@@ -292,7 +303,7 @@ const BodyComponent = () => {
       y: 190,
       imgName: {
         0: {
-          principal: colageno,
+          principal: colageno2,
           detalle: [manosycodos],
         },
         1: {

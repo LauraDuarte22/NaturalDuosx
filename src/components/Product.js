@@ -4,12 +4,16 @@ import { Container, Col, Row } from "react-bootstrap";
 import "./styles/Product.css";
 
 const Product = ({ index, imageName, detalle }) => {
-  
   const productData = {
     Colageno: {
       name: "Colageno",
       title: "Colágeno Hidrolizado  ",
       text: "con pulpa de uva y vitaminas enfocadas en la revitalización de tu piel y el fortalecimiento del cabello.",
+    },
+    Colageno2: {
+      name: "Colageno",
+      title: "Colágeno Hidrolizado  ",
+      text: "con pulpa de uva y vitaminas perfectas para el fortalecimiento de articulaciones y uñas. Su consumo diario protege ligamentos y tendones. Su consumo diario protege ligamentos y tendones.",
     },
     VitaminaC: {
       name: "vitamina_c",
@@ -36,6 +40,11 @@ const Product = ({ index, imageName, detalle }) => {
       title: "El consumo de Fibra Duo Sline ",
       text: " restablece el tránsito intestinal evitando el estreñimiento. Con sus 7 fibras naturales desecha toxinas, adelgaza, evita la acumulación de grasas y limpia el colon previniendo el cáncer. ",
     },
+     FibraSlim2: {
+      name: "Fibra",
+      title: " Fibra Duo Sline ",
+      text: "contiene 7 fibras naturales que te ayudarán a adelgazar, a evitar la acumulación de grasas y al desecho de toxinas, ",
+    },
     GasPlus: {
       name: "GasPlus",
       title: "Tratamiento de Aloe Vera ",
@@ -51,20 +60,35 @@ const Product = ({ index, imageName, detalle }) => {
       title: "Gel  ",
       text: "indicado para las dolencias articulares, inflamaciones y síntomas relacionados. Trata los problemas de artritis, artrosis y reumáticos.",
     },
+    Reuduol2: {
+      name: "Reuduol",
+      title: "Gel  ",
+      text: "indicado para las dolencias óseas, articulares y síntomas relacionados. Trata los problemas reumáticos. Se recomienda en adultos.",
+    },
+    Reuduol3: {
+      name: "Reuduol",
+      title: "Gel  ",
+      text: "indicado para dolencias musculares, articulares y síntomas relacionados. Trata los problemas reumáticos. Se recomienda en adultos..",
+    },
     Duoprox: {
       name: "Bebida Natural",
       title: "Bebida Natural ",
       text: " a base de tomate, mangostino, sandia y vitaminas, que con sus grandes cantidades de licopeno previene la prostatitis y trata la inflamación de la próstata. Disminuye el riesgo de cáncer de próstata",
+    },
+    Duoprox2: {
+      name: "Bebida energizante",
+      title: "Bebida energizante ",
+      text: " a base de borojó, guaraná y Noni enfocado al aumento del deseo sexual para hombres y mujeres obteniendo un mayor rendimiento físico y en pareja.",
     },
     Uronex: {
       name: "Bebida Natural",
       title: "Producto de Origen Natural",
       text: " a base de arándano y mangostino ideal para las infecciones urinarias. Limpia las vías urinarias, trata la cistitis.",
     },
-    vitamina_d: {
+    VitadaySure2: {
       name: "vitamina_d",
-      title: "Alimento Multivitamínico ",
-      text: "con complejo B, calostro bovino, omega 3, proteínas, vitaminas y minerales. Mantiene y recupera la fuerza y masa muscular del cuerpo.",
+      title: "Multivitamínico ",
+      text: "esencial para el desarrollo y crecimiento de los niños. Contiene todas las vitaminas y minerales que el cuerpo necesita para el desarrollo de dientes y huesos sanos y fuertes.",
     },
     Vitaday: {
       name: "Vitaday",
