@@ -315,6 +315,7 @@ const BodyComponent = () => {
       },
     },
   ];
+  
   const handlePointClick = (pointId, linkedPoints, pointImage) => {
     if (selectedPoint === pointId || selectedLinkedPoints.includes(pointId)) {
       setSelectedPoint(null);

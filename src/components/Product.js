@@ -119,12 +119,15 @@ const Product = ({ index, imageName, detalle }) => {
   const fullName = name.split(".")[0];
   let title = "";
   let text = "";
+  let imageNone="";
 
   if (name && name.includes("data")) {
+    imageNone='Sombra';
     ({ title, text } = productData["Sombra"]);
   } else {
     ({ title, text } = productData[fullName]);
   }
+  console.log(imageNone)
   const handlePointerEnter = () => {
     setIsHovered(true);
   };
@@ -174,6 +177,8 @@ const Product = ({ index, imageName, detalle }) => {
             <img
               className={`mb-5 ml-5 my-2  selected-image
               ${index === 2 ? "margin-special" : ""}`}
+              style={{ width: imageNone === "Sombra" ? "135px" : "170px" }} // Añade el estilo de ancho especial aquí
+
               key={index}
               src={imageName}
               alt={`Producto ${index}`}
