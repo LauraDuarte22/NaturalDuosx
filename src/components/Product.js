@@ -159,7 +159,7 @@ const Product = ({ index, imageName, detalle }) => {
         <Col xs="12" md="6">
           <div className="d-flex align-items-center selected-image-container">
             {isHovered && (
-              <div className="background-svg ">
+              <div className={` ${imageNone === "Sombra"  ?" background-svg-special" : "background-svg "}`}>
                 <div className="margin-text text-white">
                   <span className="fw-bold">{title}</span> {text}
                 </div>
@@ -175,10 +175,10 @@ const Product = ({ index, imageName, detalle }) => {
               </div>
             )}
             <img
-              className={`mb-5 ml-5 my-2  selected-image
-              ${index === 2 ? "margin-special" : ""}`}
-              style={{ width: imageNone === "Sombra" ? "135px" : "170px" }} // Añade el estilo de ancho especial aquí
-
+              className={`mb-5 ml-5 my-2  
+              ${index === 2 ? "margin-special" : ""}
+              ${imageNone === "Sombra"  ?"especial-selected-image" : "selected-image "}`}
+           
               key={index}
               src={imageName}
               alt={`Producto ${index}`}
