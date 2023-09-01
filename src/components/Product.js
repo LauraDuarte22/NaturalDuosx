@@ -20,6 +20,11 @@ const Product = ({ index, imageName, detalle }) => {
       title: "Colágeno Hidrolizado  ",
       text: "pulpa de uva y vitaminas. Reduce el riesgo de fracturas óseas, protege ligamentos y tendones",
     },
+     Colageno4: {
+      name: "Colageno",
+      title: "Colágeno Hidrolizado  ",
+      text: "pulpa de uva y vitaminas. Incrementa el tono muscular, da vitalidad al cuerpo, protege ligamentos y tendones"
+    },
     VitaminaC: {
       name: "vitamina_c",
       title: "La Vitamina C + Zinc, ",
@@ -115,14 +120,8 @@ const Product = ({ index, imageName, detalle }) => {
 
   const { title, text } = productData[fullName];
 
-  ///static/media/Euximil.da29b5d227da8b79a1f9.png
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+
   const handlePointerEnter = () => {
     setIsHovered(true);
   };
@@ -171,7 +170,7 @@ const Product = ({ index, imageName, detalle }) => {
             )}
             <img
               className={`mb-5 ml-5 my-2  selected-image
-              ${index == 2 ? "margin-special" : ""}`}
+              ${index === 2 ? "margin-special" : ""}`}
               key={index}
               src={imageName}
               alt={`Producto ${index}`}

@@ -4,6 +4,7 @@ import image from "../assets/Body.png";
 import colageno from "../assets/Productos/Colageno.png";
 import colageno2 from "../assets/Productos/Colageno2.png";
 import colageno3 from "../assets/Productos/Colageno3.png";
+import colageno4 from "../assets/Productos/Colageno4.png";
 
 import vitamina_c from "../assets/Productos/VitaminaC.png";
 import VitadaySure from "../assets/Productos/VitadaySure.png";
@@ -288,7 +289,7 @@ const BodyComponent = () => {
       y: 100,
       imgName: {
         0: {
-          principal: colageno,
+          principal: colageno4,
           detalle: [mano],
         },
         1: {
