@@ -20,10 +20,10 @@ const Product = ({ index, imageName, detalle }) => {
       title: "Colágeno Hidrolizado  ",
       text: "pulpa de uva y vitaminas. Reduce el riesgo de fracturas óseas, protege ligamentos y tendones",
     },
-     Colageno4: {
+    Colageno4: {
       name: "Colageno",
       title: "Colágeno Hidrolizado  ",
-      text: "pulpa de uva y vitaminas. Incrementa el tono muscular, da vitalidad al cuerpo, protege ligamentos y tendones"
+      text: "pulpa de uva y vitaminas. Incrementa el tono muscular, da vitalidad al cuerpo, protege ligamentos y tendones",
     },
     VitaminaC: {
       name: "vitamina_c",
@@ -50,7 +50,7 @@ const Product = ({ index, imageName, detalle }) => {
       title: "El consumo de Fibra Duo Sline ",
       text: " restablece el tránsito intestinal evitando el estreñimiento. Con sus 7 fibras naturales desecha toxinas, adelgaza, evita la acumulación de grasas y limpia el colon previniendo el cáncer. ",
     },
-     FibraSlim2: {
+    FibraSlim2: {
       name: "Fibra",
       title: " Fibra Duo Sline ",
       text: "contiene 7 fibras naturales que te ayudarán a adelgazar, a evitar la acumulación de grasas y al desecho de toxinas, ",
@@ -83,10 +83,10 @@ const Product = ({ index, imageName, detalle }) => {
     Duoprox: {
       name: "Bebida Natural",
       title: "Bebida Natural ",
-      text: "Bebida Natural a base de tomate, mangostino, sandia y vitaminas para limpiar el tracto urinario, regula la fuerza y la continuidad del chorro urinario, alivia la dificultad, el ardor y el dolor al orinar"
+      text: "Bebida Natural a base de tomate, mangostino, sandia y vitaminas para limpiar el tracto urinario, regula la fuerza y la continuidad del chorro urinario, alivia la dificultad, el ardor y el dolor al orinar",
     },
-   
-    Duoprox2: {
+
+    Sombra: {
       name: "Bebida energizante",
       title: "Bebida energizante ",
       text: " a base de borojó, guaraná y Noni enfocado al aumento del deseo sexual para hombres y mujeres obteniendo un mayor rendimiento físico y en pareja.",
@@ -117,11 +117,14 @@ const Product = ({ index, imageName, detalle }) => {
 
   const name = imageName.replace("/static/media/", "");
   const fullName = name.split(".")[0];
+  let title = "";
+  let text = "";
 
-  const { title, text } = productData[fullName];
-
-
-
+  if (name && name.includes("data")) {
+    ({ title, text } = productData["Sombra"]);
+  } else {
+    ({ title, text } = productData[fullName]);
+  }
   const handlePointerEnter = () => {
     setIsHovered(true);
   };

@@ -5,7 +5,7 @@ import colageno from "../assets/Productos/Colageno.png";
 import colageno2 from "../assets/Productos/Colageno2.png";
 import colageno3 from "../assets/Productos/Colageno3.png";
 import colageno4 from "../assets/Productos/Colageno4.png";
-
+import sombra from "../assets/Productos/Sombra.png"
 import vitamina_c from "../assets/Productos/VitaminaC.png";
 import VitadaySure from "../assets/Productos/VitadaySure.png";
 import VitadaySure2 from "../assets/Productos/VitadaySure2.png";
@@ -16,7 +16,6 @@ import GasPlus from "../assets/Productos/GasPlus.png";
 import FibraSlim from "../assets/Productos/FibraSlim.png";
 import FibraSlim2 from "../assets/Productos/FibraSlim2.png";
 import Duoprox from "../assets/Productos/Duoprox.png";
-import Duoprox2 from "../assets/Productos/Duoprox2.png";
 import Duoprox3 from "../assets/Productos/Duoprox3.png"
 
 import Uronex from "../assets/Productos/Uronex.png";
@@ -221,7 +220,7 @@ const BodyComponent = () => {
       y: 190,
       imgName: {
         0: {
-          principal: Duoprox2,
+          principal: sombra,
           detalle: [Sexo],
         },
       },
