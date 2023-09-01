@@ -15,6 +15,11 @@ const Product = ({ index, imageName, detalle }) => {
       title: "Colágeno Hidrolizado  ",
       text: "con pulpa de uva y vitaminas perfectas para el fortalecimiento de articulaciones y uñas. Su consumo diario protege ligamentos y tendones. Su consumo diario protege ligamentos y tendones.",
     },
+    Colageno3: {
+      name: "Colageno",
+      title: "Colágeno Hidrolizado  ",
+      text: "pulpa de uva y vitaminas. Reduce el riesgo de fracturas óseas, protege ligamentos y tendones",
+    },
     VitaminaC: {
       name: "vitamina_c",
       title: "La Vitamina C + Zinc, ",
@@ -73,12 +78,18 @@ const Product = ({ index, imageName, detalle }) => {
     Duoprox: {
       name: "Bebida Natural",
       title: "Bebida Natural ",
-      text: " a base de tomate, mangostino, sandia y vitaminas, que con sus grandes cantidades de licopeno previene la prostatitis y trata la inflamación de la próstata. Disminuye el riesgo de cáncer de próstata",
+      text: "Bebida Natural a base de tomate, mangostino, sandia y vitaminas para limpiar el tracto urinario, regula la fuerza y la continuidad del chorro urinario, alivia la dificultad, el ardor y el dolor al orinar"
     },
+   
     Duoprox2: {
       name: "Bebida energizante",
       title: "Bebida energizante ",
       text: " a base de borojó, guaraná y Noni enfocado al aumento del deseo sexual para hombres y mujeres obteniendo un mayor rendimiento físico y en pareja.",
+    },
+    Duoprox3: {
+      name: "Bebida Natural",
+      title: "Bebida Natural ",
+      text: " a base de tomate, mangostino, sandia y vitaminas, que con sus grandes cantidades de licopeno previene la prostatitis y trata la inflamación de la próstata.Disminuye el riesgo de cáncer de próstata",
     },
     Uronex: {
       name: "Bebida Natural",

@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import image from "../assets/Body.png";
 import colageno from "../assets/Productos/Colageno.png";
 import colageno2 from "../assets/Productos/Colageno2.png";
+import colageno3 from "../assets/Productos/Colageno3.png";
 
 import vitamina_c from "../assets/Productos/VitaminaC.png";
 import VitadaySure from "../assets/Productos/VitadaySure.png";
@@ -15,6 +16,7 @@ import FibraSlim from "../assets/Productos/FibraSlim.png";
 import FibraSlim2 from "../assets/Productos/FibraSlim2.png";
 import Duoprox from "../assets/Productos/Duoprox.png";
 import Duoprox2 from "../assets/Productos/Duoprox2.png";
+import Duoprox3 from "../assets/Productos/Duoprox3.png"
 
 import Uronex from "../assets/Productos/Uronex.png";
 import Reuduol from "../assets/Productos/Reuduol.png";
@@ -205,7 +207,7 @@ const BodyComponent = () => {
       y: 210,
       imgName: {
         0: {
-          principal: Duoprox,
+          principal: Duoprox3,
           detalle: [Prostata],
         },
       },
@@ -239,7 +241,7 @@ const BodyComponent = () => {
           detalle: [VitadayBe],
         },
         2: {
-          principal: colageno,
+          principal: colageno3,
           detalle: [huesos2],
         },
       },
