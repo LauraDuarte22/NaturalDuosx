@@ -127,7 +127,7 @@ const Product = ({ index, imageName, detalle }) => {
   } else {
     ({ title, text } = productData[fullName]);
   }
-  console.log(imageNone)
+
   const handlePointerEnter = () => {
     setIsHovered(true);
   };
